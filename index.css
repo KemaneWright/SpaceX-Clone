@@ -1,0 +1,52 @@
+    body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFFFFF;
+    padding-bottom: 0px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #ccac55;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus {
+    color: #ccac55;
+}
+
+.nav {
+    padding: 1%;
+}
+
+.navbar-header {
+    padding: 1% 0% 1% 1%;
+}
+
+.navbar-brand {
+    padding: 10px 0px 10px 10px;
+}
+
+.navbar-nav>li>a {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 25px;
+}
+
+#gray>li>a {
+    color: #8b939b;
+}
+
+#gray>li>a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #8b939b;
+}
+
+#gray>li>a:focus {
+    color: #ccac55;
+}
+
+.navbar {
+    border-radius: 0px;
+}
