@@ -51,6 +51,12 @@
     border-radius: 0px;
 }
 @media (max-width: 1200px) {
+.container {
+     width: 100%;
+   }
+}
+
+@media (max-width: 1020px) {
     .navbar-header {
         float: none;
     }
