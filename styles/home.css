@@ -1,0 +1,17 @@
+.col-xs-12 {
+  padding: 0px;
+}
+/*.home-background {
+  height: 640px;
+  position: relative;
+}
+.home-background > img {
+  position: absolute;
+  bottom: 0;
+  height: 1600px;
+}*/
+.home-info {
+  background-color: lightgray;
+  height: 700px;
+  width: 500px;
+}

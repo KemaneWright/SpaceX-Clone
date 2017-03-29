@@ -50,13 +50,13 @@
 .navbar {
     border-radius: 0px;
 }
-@media (max-width: 1200px) {
-.container {
-     width: 100%;
-   }
+
+.navbar-bottom {
+  margin-bottom: 0;
 }
 
-@media (max-width: 1020px) {
+
+/*@media (min-width: @screen-md-min) {
     .navbar-header {
         float: none;
     }
@@ -64,7 +64,7 @@
         float: none !important;
     }
     .navbar-toggle {
-        display: block;
+        display: none !important;
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
@@ -91,4 +91,4 @@
     .collapse.in{
         display:block !important;
     }
-}
+}*/
