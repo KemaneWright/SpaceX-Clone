@@ -55,12 +55,11 @@
   margin-bottom: 0;
 }
 
-.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-     margin-right: 1%;
-     margin-left: 1%;
-}
 
-@grid-float-breakpoint: @screen-md-min;
+
+
+
+
 
 
 @media (min-width: @screen-lg-min) {
