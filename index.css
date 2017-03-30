@@ -49,27 +49,57 @@
 
 .navbar {
     border-radius: 0px;
+    min-height: 65px;
 }
 
 .navbar-bottom {
   margin-bottom: 0;
 }
 .navbar-bottom a {
-  padding: 5px;
-  color: white;
+padding: 7px;
+position: relative;
+color: white;
+text-align: center;
+top: 15px;
+}
+.navbar-bottom span {
+left: 11%;
+position: relative;
+color: white;
+text-align: center;
+top: 15px;
+}
+
+``
+
+@media (min-width: @screen-sm-min) {
+
 }
 
 
 
+@media (min-width: 992px) {
+  .nav {
+      padding: 1%;
+  }
 
 
+  .navbar-brand {
+      padding: 10px 0px 10px 10px;
+  }
 
+  .navbar-nav>li>a {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-right: 25px;
+  }
+  .container-fluid > .navbar-header {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
 
 
 @media (min-width: @screen-lg-min) {
-  .container-fluid {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
 
 }
