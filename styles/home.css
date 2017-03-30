@@ -10,7 +10,6 @@
     font-size: 13px;
     position: relative;
     top: 8px;
-    width: 104%;
     margin-bottom: 15px;
     height: 45px;
     color: white;
@@ -55,20 +54,13 @@
     color: black;
 }
 
-@media (min-width: @screen-sm-min) {
-    .drgimg {
-        position: relative;
-        top: 50px;
-    }
-}
-
 @media (min-width: 992px) {
     .drgimg {
         position: relative;
         top: -150px;
     }
     #drgrtn {
-        top: -365px;
+        top: -285px;
         height: 135px;
     }
     .col-xs-6 {
@@ -79,7 +71,27 @@
     #drgrtn strong {
         position: relative;
         top: 10px;
-        left: 30%;
+        left: 20%;
+    }
+    #drgrtn>.btn-sm {
+        position: relative;
+        right: -25%;
+        top: 20%;
+    }
+    .btn-default {
+      height: 50px;
+      width: 145px;
+    }
+    .home-info {
+        text-align: center;
+        position: relative;
+        top: -230px;
+    }
+    .home-block-img {
+      top: 80px;
+    }
+    .home-info p {
+      font-size: 30px;
     }
 }
 
@@ -88,9 +100,13 @@
         position: relative;
         top: -230px;
     }
+    #drgrtn {
+        top: -365px;
+        height: 135px;
+    }
     #spaceX-nav .container-fluid {
-        padding-left: 7%;
-        padding-right: 7%;
+        padding-left: 8%;
+        padding-right: 8%;
     }
     .navbar {
         border-radius: 0px;
@@ -101,18 +117,24 @@
         right: -20%;
         top: 30%;
     }
-    @media (min-width: 1200px) {
-        .container {
-            width: 1170px;
-            position: relative;
-            top: -270px;
-        }
-        p {
-          font-size: 40px;
-        }
-        .home-block-img {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
+    .container {
+        width: 1170px;
+        position: relative;
+        top: -270px;
     }
+    #drgrtn p {
+        font-size: 40px;
+    }
+    .home-block-img {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+        width: 175px;
+        height: 50px;
+        font-size: 20px;
+    }s

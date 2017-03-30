@@ -1,0 +1,66 @@
+.falcon9-page {
+  text-align: center;
+}
+.falconhead {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -185px;
+}
+.watch-falcon9 {
+  position: relative;
+  text-align: center;
+  top: -165px;
+  font-size: 45px;
+  color: white;
+}
+.dark {
+  background-color: #181c1f;
+  color: #ccc;
+  position: relative;
+  top: -178px;
+}
+.intro {
+  padding: 0 6%;
+}
+.dark h1 {
+  padding: 5px;
+  border-bottom: 1px dashed gray;
+}
+.falcon9img {
+  background-color: #181c1f;
+  top: -10px;
+  padding-top: 45px;
+}
+.falcon9details1 {
+  position: absolute;
+  top: 175%;
+  font-weight: bold;
+  padding: 0 5%;
+  color: white;
+  background-color: rgba(0, 0, 50, 0.7);
+}
+.falcon9details2 {
+  position: absolute;
+  top: 325%;
+  font-weight: bold;
+  padding: 0 5%;
+  color: white;
+  background-color: rgba(0, 0, 50, 0.7);
+}
+.falcon9details3 {
+  position: absolute;
+  top: 572%;
+  font-weight: bold;
+  padding: 0 5%;
+  color: white;
+  background-color: rgba(0, 0, 50, 0.7);
+}
+.falcon9details4 {
+  position: absolute;
+  top: 870%;
+  font-weight: bold;
+  padding: 0 5%;
+  color: white;
+  background-color: rgba(0, 0, 50, 0.7);
+}
