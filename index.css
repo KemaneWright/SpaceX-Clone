@@ -54,6 +54,10 @@
 .navbar-bottom {
   margin-bottom: 0;
 }
+.navbar-bottom a {
+  padding: 5px;
+  color: white;
+}
 
 
 

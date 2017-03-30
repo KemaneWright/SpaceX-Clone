@@ -1,39 +1,70 @@
 .col-xs-12 {
   padding: 0px;
 }
-/*.home-background {
-  height: 640px;
-  position: relative;
-}
-.home-background > img {
-  position: absolute;
-  bottom: 0;
-  height: 1600px;
-}*/
 .home-info {
-  background-color: lightgray;
-  height: 700px;
-  width: 300px;
+  text-align: center;
 }
-.drgrtn {
-font-size: 13px;
-position: relative;
-top: -30px;
-left: 3%;
-height: 5%;
-color: white;
-background-color: rgba(0, 0, 0, .5);
+#drgrtn {
+  font-size: 13px;
+  position: relative;
+  top: 8px;
+  width: 104%;
+  margin-bottom: 15px;
+  height: 45px;
+  color: white;
+  background-color: rgba(0, 0, 0, .5);
+}
+#drgrtn > p {
+  vertical-align:text-bottom;
+}
+#drgrtn > button {
+  position: relative;
+  top: -15%;
 }
 .drgimg {
   position: relative;
-  top: 50px;
+  top: 53px;
+}
+#drgrtn > .btn-sm {
+  position: relative;
+  right: -13%;
+}
+#drgrtn strong {
+  position: relative;
+  top: 10px;
+}
+.home-block-img {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.home-block-img > img {
+  width: 100%;
+}
+.home-block-img a {
+  color: black;
 }
 
-@media (min-width: @screen-sm-min) { ... }
+@media (min-width: @screen-sm-min) {
+  .drgimg {
+    position: relative;
+    top: 50px;
+  }
+}
 
 
 
-@media (min-width: @screen-md-min) { ... }
+@media (min-width: @screen-md-min) {
+  .drgimg {
+    position: relative;
+    top: 50px;
+  }
+}
 
 
-@media (min-width: @screen-lg-min) { ... }
+@media (min-width: @screen-lg-min) {
+  .drgimg {
+    position: relative;
+    top: 50px;
+  }
+}
