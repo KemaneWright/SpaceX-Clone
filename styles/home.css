@@ -2,49 +2,42 @@
     padding: 0px;
 }
 
+.home-background {
+    position: relative;
+    margin-top: 55px;
+    overflow: auto;
+}
+
 .home-info {
     text-align: center;
+    margin-top: 10px;
 }
 
 #drgrtn {
     font-size: 13px;
-    position: relative;
-    top: 8px;
-    margin-bottom: 15px;
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
     height: 45px;
     color: white;
     background-color: rgba(0, 0, 0, .5);
 }
 
-#drgrtn>p {
-    vertical-align: text-bottom;
-}
-
 #drgrtn>button {
-    position: relative;
-    top: -20%;
+    position: absolute;
+    top: 10%;
+    right: 5%;
 }
 
-.drgimg {
-    position: relative;
-    top: 53px;
-}
-
-#drgrtn>.btn-sm {
-    position: relative;
-    right: -5%;
-}
-
-#drgrtn strong {
-  position: relative;
-      top: 10px;
-      font-size: 15px;
-      left: 20%;
+#drgrtn>p {
+    top: 5px;
+    font-size: 15px;
+    left: 10%;
 }
 
 .home-block-img {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -57,18 +50,8 @@
 }
 
 @media (min-width: 992px) {
-    .drgimg {
-        position: relative;
-        top: -150px;
-    }
-    #drgrtn {
-        top: -285px;
-        height: 135px;
-    }
-    .col-xs-6 {
-        width: 50%;
-        margin-top: 10px;
-        font-size: 45px;
+    .home-background {
+        margin-top: 0px;
     }
     #drgrtn strong {
         position: relative;
@@ -82,52 +65,41 @@
         top: 20%;
     }
     .btn-default {
-      height: 50px;
-      width: 145px;
-    }
-    .home-info {
-        text-align: center;
-        position: relative;
-        top: -230px;
+        height: 50px;
+        width: 145px;
     }
     .home-block-img {
-      top: 80px;
+        top: 80px;
     }
     .home-info p {
-      font-size: 30px;
+        font-size: 30px;
     }
 }
 
 @media (min-width: 1200px) {
+    .home-background {
+        margin-top: -115px;
+    }
+    .home-info {
+      height: 600px;
+    }
     #drgrtn {
-        top: -250px;
         height: 100px;
     }
-    #spaceX-nav .container-fluid {
-        padding-left: 8%;
-        padding-right: 8%;
-    }
-    .navbar {
-        border-radius: 0px;
-        min-height: 65px;
-    }
-    #drgrtn>.btn-sm {
+    #drgrtn>button {
         position: relative;
-        right: -25%;
+        right: -30%;
         top: 20%;
     }
-    .container {
-        width: 1170px;
-        position: relative;
-        top: -190px;
-    }
-    #drgrtn p {
+    #drgrtn>p {
         font-size: 40px;
+        top: 10px;
+        left: 0%;
     }
     .home-block-img {
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+      height: 300px;
+      margin-left: 6%;
+      font-size: 20px;
     }
     .btn-default {
         color: #333;
@@ -136,4 +108,5 @@
         width: 175px;
         height: 50px;
         font-size: 20px;
-    }s
+    }
+  }
