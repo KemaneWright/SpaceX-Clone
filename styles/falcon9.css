@@ -1,11 +1,12 @@
 .falcon9-page {
   text-align: center;
+  height: 6925px;
 }
 .falconhead {
   color: white;
   text-align: center;
   position: relative;
-  top: -185px;
+  top: -170px;
 }
 .watch-falcon9 {
   position: relative;
@@ -14,11 +15,14 @@
   font-size: 45px;
   color: white;
 }
+.falc9 {
+  top: 50px;
+}
 .dark {
   background-color: #181c1f;
   color: #ccc;
   position: relative;
-  top: -178px;
+  top: -170px;
 }
 .intro {
   padding: 0 6%;
@@ -34,7 +38,7 @@
 }
 .falcon9details1 {
   position: absolute;
-  top: 175%;
+  top: 15%;
   font-weight: bold;
   padding: 0 5%;
   color: white;
@@ -42,7 +46,7 @@
 }
 .falcon9details2 {
   position: absolute;
-  top: 325%;
+  top: 25%;
   font-weight: bold;
   padding: 0 5%;
   color: white;
@@ -50,7 +54,7 @@
 }
 .falcon9details3 {
   position: absolute;
-  top: 572%;
+  top: 47%;
   font-weight: bold;
   padding: 0 5%;
   color: white;
@@ -58,9 +62,42 @@
 }
 .falcon9details4 {
   position: absolute;
-  top: 870%;
+  top: 67%;
   font-weight: bold;
   padding: 0 5%;
   color: white;
   background-color: rgba(0, 0, 50, 0.7);
+}
+.falcon9details5 {
+  position: absolute;
+  top: 89%;
+  font-weight: bold;
+  padding: 0 5%;
+  color: white;
+  background-color: rgba(0, 0, 50, 0.7);
+}
+.table {
+  position: relative;
+  top: -190px;
+  font-size: 30px;
+}
+.technicaloverwiew h3 {
+  border-top: 1px solid;
+}
+.falcon9-info {
+  position: relative;
+  top: -175px;
+}
+.falcon9-block-img {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.falcon9-block-img>img {
+    width: 100%;
+}
+
+.falcon9-block-img a {
+    color: black;
 }

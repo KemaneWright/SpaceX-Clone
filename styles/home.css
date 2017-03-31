@@ -22,7 +22,7 @@
 
 #drgrtn>button {
     position: relative;
-    top: -15%;
+    top: -20%;
 }
 
 .drgimg {
@@ -36,8 +36,10 @@
 }
 
 #drgrtn strong {
-    position: relative;
-    top: 10px;
+  position: relative;
+      top: 10px;
+      font-size: 15px;
+      left: 20%;
 }
 
 .home-block-img {
@@ -70,8 +72,9 @@
     }
     #drgrtn strong {
         position: relative;
-        top: 10px;
+        top: -5px;
         left: 20%;
+        font-size: 40px;
     }
     #drgrtn>.btn-sm {
         position: relative;
@@ -96,13 +99,9 @@
 }
 
 @media (min-width: 1200px) {
-    .drgimg {
-        position: relative;
-        top: -230px;
-    }
     #drgrtn {
-        top: -365px;
-        height: 135px;
+        top: -250px;
+        height: 100px;
     }
     #spaceX-nav .container-fluid {
         padding-left: 8%;
@@ -114,13 +113,13 @@
     }
     #drgrtn>.btn-sm {
         position: relative;
-        right: -20%;
-        top: 30%;
+        right: -25%;
+        top: 20%;
     }
     .container {
         width: 1170px;
         position: relative;
-        top: -270px;
+        top: -190px;
     }
     #drgrtn p {
         font-size: 40px;

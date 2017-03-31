@@ -44,6 +44,12 @@
   font-size: 13px;
   padding-left: 5px;
 }
+@media (min-width: 425px) {
+  .copyright {
+    font-size: 13px;
+    padding-left: 40px;
+  }
+}
 
 #gray>li>a {
     color: #8b939b;
@@ -85,9 +91,6 @@ top: 6px;
 }
 
 @media (min-width: 992px) {
-  .nav {
-      padding: 1%;
-  }
 
 
   .navbar-brand {
