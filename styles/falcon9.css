@@ -1,123 +1,94 @@
 .falcon9-background {
-  text-align: center;
-  margin-top: 50px;
-  width: 100vw;
-  position: relative;
-  height: 250px;
+    text-align: center;
+    margin-top: 50px;
+    width: 100vw;
+    position: relative;
+    height: 213px;
 }
+
 .falconhead {
-  color: white;
-  position: absolute;
-  padding: 0 5%;
+    color: white;
+    position: absolute;
+    padding: 0 5%;
 }
+
 .watch-falcon9 {
-  position: relative;
-  font-size: 45px;
-  color: white;
-  top: -55px;
+    position: relative;
+    font-size: 45px;
+    color: white;
+    top: -55px;
 }
-.falcon9-parallax1 {
-  background-image: url('/images/falcon9-render1.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  height: 500px;
+
+.falc-9-plax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -15px;
+    height: 300px;
 }
-.falcon9-parallax2 {
-  background-image: url('/images/falcon9-render2.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  height: 500px;
+
+.falc-plax1 {
+    background-image: url('/images/falcon9-render1.png');
 }
-.falcon9-parallax3 {
-  background-image: url('/images/falcon9-render3.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  height: 500px;
+
+.falc-plax2 {
+    background-image: url('/images/falcon9-render2.png');
 }
-.falcon9-parallax4 {
-  background-image: url('/images/falcon9-render4.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  height: 500px;
+
+.falc-plax3 {
+    background-image: url('/images/falcon9-render3.png');
+    height: 800px;
 }
+
+.falc-plax4 {
+    background-image: url('/images/falcon9-render4.png');
+}
+
 .dark {
-  background-color: #181c1f;
-  color: #ccc;
-  position: relative;
-  top: -20px;
+    background-color: #181c1f;
+    color: #ccc;
 }
+
 .intro {
-  padding: 0 6%;
+    padding: 0 6%;
 }
+
 .dark h1 {
-  padding: 5px;
-  border-bottom: 1px dashed gray;
+    padding: 5px;
+    border-bottom: 1px dashed gray;
+    margin-top: 0px;
 }
+
 .falcon9img {
-  background-color: #181c1f;
-  top: -10px;
-  padding-top: 45px;
+    background-color: #181c1f;
+    top: -10px;
+    padding-top: 45px;
 }
-.falcon9details1 {
-  top: 15%;
-  font-weight: bold;
-  padding: 0 5%;
-  color: white;
-  background-color: rgba(0, 0, 50, 0.7);
+
+.falc-9-details {
+    position: relative;
+    top: 15%;
+    font-weight: bold;
+    padding: 0 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
-.falcon9details2 {
-  top: 25%;
-  font-weight: bold;
-  padding: 0 5%;
-  color: white;
-  background-color: rgba(0, 0, 50, 0.7);
-}
-.falcon9details3 {
-  top: 47%;
-  font-weight: bold;
-  padding: 0 5%;
-  color: white;
-  background-color: rgba(0, 0, 50, 0.7);
-}
-.falcon9details4 {
-  top: 67%;
-  font-weight: bold;
-  padding: 0 5%;
-  color: white;
-  background-color: rgba(0, 0, 50, 0.7);
-}
-.falcon9details5 {
-  position: absolute;
-  top: 89%;
-  font-weight: bold;
-  padding: 0 5%;
-  color: white;
-  background-color: rgba(0, 0, 50, 0.7);
-}
+
 .table {
-  position: relative;
-  top: -190px;
-  font-size: 30px;
+    position: relative;
+    top: -190px;
+    font-size: 30px;
 }
+
+.technicaloverwiew {
+    text-align: center;
+}
+
 .technicaloverwiew h3 {
-  border-top: 1px solid;
+    border-top: 1px solid;
 }
-.falcon9-info {
-  position: relative;
-  top: -175px;
-}
+
 .falcon9-block-img {
     padding: 10px;
     margin-bottom: 10px;
@@ -130,4 +101,32 @@
 
 .falcon9-block-img a {
     color: black;
+}
+
+.desktop-img {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .mobile-img {
+        display: none;
+    }
+    .desktop-img {
+        display: block;
+    }
+    .falcon9-background {
+        height: 518px;
+    }
+    .falconhead {
+        top: 25%;
+        padding: 0 28%;
+        text-align: center;
+        font-size: 50px;
+    }
+    .watch-falcon9 {
+      top: -135px;
+    }
+    .falc-9-plax {
+      display: none;
+    }
 }
