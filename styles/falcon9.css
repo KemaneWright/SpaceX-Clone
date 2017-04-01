@@ -1,28 +1,62 @@
-.falcon9-page {
+.falcon9-background {
   text-align: center;
-  height: 6925px;
+  margin-top: 50px;
+  width: 100vw;
+  position: relative;
+  height: 250px;
 }
 .falconhead {
   color: white;
-  text-align: center;
-  position: relative;
-  top: -170px;
+  position: absolute;
+  padding: 0 5%;
 }
 .watch-falcon9 {
   position: relative;
-  text-align: center;
-  top: -165px;
   font-size: 45px;
   color: white;
+  top: -55px;
 }
-.falc9 {
-  top: 50px;
+.falcon9-parallax1 {
+  background-image: url('/images/falcon9-render1.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  height: 500px;
+}
+.falcon9-parallax2 {
+  background-image: url('/images/falcon9-render2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  height: 500px;
+}
+.falcon9-parallax3 {
+  background-image: url('/images/falcon9-render3.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  height: 500px;
+}
+.falcon9-parallax4 {
+  background-image: url('/images/falcon9-render4.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  height: 500px;
 }
 .dark {
   background-color: #181c1f;
   color: #ccc;
   position: relative;
-  top: -170px;
+  top: -20px;
 }
 .intro {
   padding: 0 6%;
@@ -37,7 +71,6 @@
   padding-top: 45px;
 }
 .falcon9details1 {
-  position: absolute;
   top: 15%;
   font-weight: bold;
   padding: 0 5%;
@@ -45,7 +78,6 @@
   background-color: rgba(0, 0, 50, 0.7);
 }
 .falcon9details2 {
-  position: absolute;
   top: 25%;
   font-weight: bold;
   padding: 0 5%;
@@ -53,7 +85,6 @@
   background-color: rgba(0, 0, 50, 0.7);
 }
 .falcon9details3 {
-  position: absolute;
   top: 47%;
   font-weight: bold;
   padding: 0 5%;
@@ -61,7 +92,6 @@
   background-color: rgba(0, 0, 50, 0.7);
 }
 .falcon9details4 {
-  position: absolute;
   top: 67%;
   font-weight: bold;
   padding: 0 5%;
