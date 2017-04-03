@@ -116,6 +116,9 @@
             color: white;
             margin-top: 2%;
         }
+        .footer-laptop .no-bor {
+          border-left: none;
+        }
         .footer-laptop li {
             padding: 2%;
             color: lightgray;

@@ -1,7 +1,7 @@
 .falcon9-background {
     text-align: center;
     margin-top: 50px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     height: 213px;
 }
@@ -115,7 +115,7 @@
         display: block;
     }
     .falcon9-background {
-        height: 518px;
+        height: 513px;
     }
     .falconhead {
         top: 25%;
@@ -128,5 +128,47 @@
     }
     .falc-9-plax {
       display: none;
+    }
+    .technicaloverwiew {
+      display: none;
+    }
+    .falcon9-info {
+      display: none;
+    }
+    .dark {
+      overflow: auto;
+      padding-top: 3%;
+      width: 100%;
+    }
+    .intro {
+      font-size: 18px;
+    }
+    .intro>h1 {
+      font-size: 65px;
+      color: white;
+    }
+    .falc-mini-info {
+      height: 40px;
+      width: 300px;
+      background-color: #21272b;
+      margin-top: 3px;
+      padding: 2% 0% 2% 10%;
+    }
+    .falc-gallery {
+      margin-top: 90px;
+      height: 100px;
+    }
+    .falc-gallery>img {
+      margin-right: 20px;
+    }
+    .falc-mini>img {
+      float: left;
+      height: 350px;
+      margin-top: 40px;
+    }
+    .falc-gallery>a {
+      position: relative;
+      top: -30%;
+      left: 39%;
     }
 }
