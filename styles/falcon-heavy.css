@@ -1,6 +1,21 @@
 .falc-heavy-background {
-  overflow: auto;
+  text-align: center;
   margin-top: 60px;
+  width: 100%;
+  position: relative;
+  height: 125px;
+}
+.falcheavyHead {
+  font-size: 23px;
+  margin-top: 10px;
+  color: white;
+  position: relative;
+  padding: 0 5%;
+  top: -80%;
+}
+.falc-heavy-background a {
+  font-size: 30px;
+  top: -100px;
 }
 .falc-heavy-plax {
   background-image: url("/images/falcon-heavy-render.png");
@@ -31,7 +46,6 @@
 
 
 
-
 @media (min-width: 992px) {
   .falcHeavy-technicaloverwiew {
     /*display: none;*/
@@ -39,8 +53,20 @@
   .falc-heavy-plax {
     display: none;
   }
+  .falc-heavy-background {
+    height: 480px;
+    margin-top: 80px;
+  }
   .desktop-only {
     display: block;
+  }
+  .falcheavyHead {
+    font-size: 45px;
+    padding: 0px 35%;
+  }
+  .falc-heavy-background a {
+    font-size: 60px;
+    top: -300px;
   }
   .desktop-falc-heavy {
     overflow: auto;

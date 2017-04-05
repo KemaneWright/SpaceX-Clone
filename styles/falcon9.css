@@ -3,7 +3,7 @@
     margin-top: 50px;
     width: 100%;
     position: relative;
-    height: 213px;
+    height: 250px;
 }
 
 .falconhead {
@@ -182,7 +182,7 @@
       display: block;
     }
     .falcon9-background {
-        height: 513px;
+        height: 518px;
     }
     .falconhead {
         top: 25%;
@@ -191,6 +191,7 @@
         font-size: 50px;
     }
     .watch-falcon9 {
+      font-size: 60px;
       top: -135px;
     }
     .falc-9-plax {
