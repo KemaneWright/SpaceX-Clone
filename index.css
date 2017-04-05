@@ -41,7 +41,9 @@
         padding-right: 0px;
         margin-right: 25px;
     }
-
+    .navbar-inverse {
+      background-color: #080808;
+    }
     .follow {
         display: none;
     }

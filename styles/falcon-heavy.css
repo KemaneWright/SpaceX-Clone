@@ -21,3 +21,99 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
 }
+.desktop-falc-heavy {
+  display: none;
+}
+.desktop-only {
+  display: none;
+}
+
+
+
+
+
+@media (min-width: 992px) {
+  .falcHeavy-technicaloverwiew {
+    /*display: none;*/
+  }
+  .falc-heavy-plax {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+  .desktop-falc-heavy {
+    overflow: auto;
+    height: 3000px;
+    text-align: right;
+    position: relative;
+    display: block;
+  }
+  .desktop-falc-heavy-img {
+    width: 510px;
+  }
+  .falc-heavy-left {
+    position: absolute;
+    top: 0px;
+    text-align: left;
+    width: 450px;
+    font-size: 16px;
+  }
+  .falc-heavy-left img {
+    margin-left: 15px;
+    margin-top: 75px;
+  }
+  .desktop-falc-heavy h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+    padding-left: 0px;
+  }
+  .desktop-falc-heavy h4 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: white;
+  }
+  .pad-top {
+    padding-top: 190px;
+  }
+  .falcHeavy-stats {
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  .falc-heavy-stats {
+    margin-bottom: 75px;
+  }
+  .falc-heavy-stats>h4 {
+    position: relative;
+    padding-left: 0px;
+    text-align: start;
+  }
+  .falc-heavy-stats p {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 40px;
+  }
+  #falcHeavyEng {
+    left: 200px;
+  }
+  .block {
+    display: block;
+  }
+  .falc-heavy-left img {
+    margin-left: 15px;
+    margin-top: 400px;
+  }
+  .falcHeavy-info {
+    height: 1600px;
+    position: relative;
+    padding-top: 50px;
+  }
+  .falcHeavy-milestone-head {
+    padding-left: 30px;
+    margin-top: 40px;
+  }
+
+}
