@@ -1,0 +1,23 @@
+.falc-heavy-background {
+  overflow: auto;
+  margin-top: 60px;
+}
+.falc-heavy-plax {
+  background-image: url("/images/falcon-heavy-render.png");
+}
+.falc-heavy-plax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -15px;
+    height: 1250px;
+}
+.falc-heavy-details {
+    position: relative;
+    top: 3%;
+    font-weight: bold;
+    padding: 0 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}

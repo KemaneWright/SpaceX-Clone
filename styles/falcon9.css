@@ -134,6 +134,33 @@
 .falc9-updates-container {
   display: none;
 }
+.technicaloverwiew .big-stat {
+  font-size:  20px;
+  color: white;
+}
+.technicaloverwiew .lil-stat {
+  font-size: 15px;
+}
+.gold {
+  color: #ccac55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 992px) {
     .mobile-img {
@@ -291,9 +318,6 @@
     }
     .technicaloverwiew .lil-stat {
       font-size: 15px;
-    }
-    .gold {
-      color: #ccac55;
     }
     .technicaloverwiew h2 {
       position: absolute;
