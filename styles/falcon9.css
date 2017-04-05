@@ -27,6 +27,25 @@
     margin-top: -15px;
     height: 300px;
 }
+.falc9-block-img {
+  height: 350px;
+  margin-right: 1%;
+  margin-left: 2%;
+  font-size: 20px;
+}
+.falc9-block-img {
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4);
+}
+
+.falc9-block-img>img {
+    width: 100%;
+}
+
+.falc9-block-img a {
+    color: black;
+}
 
 .falc-plax1 {
     background-image: url('/images/falcon9-render1.png');
@@ -86,13 +105,13 @@
 }
 
 .technicaloverwiew h3 {
-    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .falcon9-block-img {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
 }
 
 .falcon9-block-img>img {
@@ -106,6 +125,15 @@
 .desktop-img {
     display: none;
 }
+.desktop-falc {
+  display: none;
+}
+.falc-mini {
+  display: none;
+}
+.falc9-updates-container {
+  display: none;
+}
 
 @media (min-width: 992px) {
     .mobile-img {
@@ -113,6 +141,18 @@
     }
     .desktop-img {
         display: block;
+    }
+    .desktop-img {
+        display: block;
+    }
+    .desktop-falc {
+      display: block;
+    }
+    .falc-mini {
+      display: block;
+    }
+    .falc9-updates-container {
+      display: block;
     }
     .falcon9-background {
         height: 513px;
@@ -130,10 +170,16 @@
       display: none;
     }
     .technicaloverwiew {
-      display: none;
+      /*display: none;*/
+      text-align: left;
+      background-color: #0b0b0b;
+      margin-bottom: 80px;
+      padding: 5%;
+      margin-top: 50px;
+      position: relative;
     }
     .falcon9-info {
-      display: none;
+      /*display: none;*/
     }
     .dark {
       overflow: auto;
@@ -142,6 +188,7 @@
     }
     .intro {
       font-size: 18px;
+      margin-bottom: 115px;
     }
     .intro>h1 {
       font-size: 65px;
@@ -153,6 +200,12 @@
       background-color: #21272b;
       margin-top: 3px;
       padding: 2% 0% 2% 10%;
+    }
+    .falc9-block-img {
+      width: 30%;
+    }
+    .falc-mini {
+      margin-bottom: 115px;
     }
     .falc-gallery {
       margin-top: 90px;
@@ -170,5 +223,154 @@
       position: relative;
       top: -30%;
       left: 39%;
+    }
+    .desktop-falc9-img {
+      width: 166px;
+    }
+    .desktop-falc {
+      overflow: auto;
+      text-align: center;
+      position: relative;
+    }
+    .falc9-left {
+      position: absolute;
+      top: 0px;
+      text-align: left;
+      width: 315px;
+      font-size: 16px;
+    }
+    .falc9-left img {
+      margin-left: 15px;
+      margin-top: 75px;
+    }
+    .desktop-falc h2 {
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: white;
+      padding-left: 0px;
+    }
+    .desktop-falc h4 {
+      margin-top: 30px;
+      margin-bottom: 25px;
+      color: white;
+    }
+    .falc9-stats {
+      border-bottom: 1px solid gray;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    .falc-9-stats>h4 {
+      position: relative;
+      padding-left: 0px;
+      text-align: start;
+    }
+    .falc-9-stats p {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      font-size: 40px;
+    }
+    .burntime {
+      margin-left: 40px;
+    }
+    #burntimeP {
+      left: 150px;
+    }
+    .thrustLevel {
+      padding-top: 30px;
+    }
+    .big-stat {
+      color: white;
+      font-size: 30px;
+    }
+    .lil-stat {
+      font-size: 20px;
+    }
+    .technicaloverwiew .big-stat {
+      font-size:  20px;
+    }
+    .technicaloverwiew .lil-stat {
+      font-size: 15px;
+    }
+    .gold {
+      color: #ccac55;
+    }
+    .technicaloverwiew h2 {
+      position: absolute;
+      top: 0px;
+      color: white;
+    }
+    .technicaloverwiew h3 {
+      font-size: 20px;
+    }
+    .falc9-right {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      text-align: left;
+      width: 315px;
+      font-size: 16px;
+    }
+    .lil-drg-img {
+      top: 83px;
+    }
+    .mini-img-dtails {
+      font-size: 12px;
+      margin-top: 10px;
+      height: 68px;
+    }
+    #merlins {
+      margin-top: 300%;
+    }
+    .falc9-info {
+      height: 1100px;
+      position: relative;
+      padding-top: 50px;
+    }
+    .milestone-head {
+      padding-left: 30px;
+    }
+
+    .falc9-updates-container {
+      position: absolute;
+      bottom: 150px;
+      height: 350px;
+      width: 100%;
+    }
+    .falc9-updates-head {
+      padding-bottom: 15px;
+      border-bottom: 3px solid lightgray;
+    }
+    .falc9-updates-head a {
+      float: right;
+      font-size: 14px;
+    }
+    .falc9-news-head {
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-bottom: 1px dashed gray;
+    }
+    .falc9-news-head a {
+      float: right;
+      font-size: 14px
+    }
+    .falc9-news-p {
+      padding-bottom: 25px;
+      border-bottom: 1px dashed gray;
+    }
+    .falc9-updates-container h4 a {
+      color: black;
+    }
+    .falc9-gallery-head {
+      padding-bottom: 15px;
+      padding-top: 15px;
+
+    }
+    .falc9-gallery-head a {
+      float: right;
+      font-size: 14px
+    }
+    .falc9-gallery img {
+      padding: 1%;
     }
 }
