@@ -15,7 +15,8 @@ angular.module('spaceXApp', ['ui.router'])
     })
     .state('dragon', {
       url: '/dragon',
-      templateUrl: './views/dragon.html'
+      templateUrl: './views/dragon.html',
+      controller: 'dragonCtrl'
     })
     .state('updates', {
       url: '/updates',

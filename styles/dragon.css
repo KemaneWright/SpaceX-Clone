@@ -17,9 +17,37 @@
   padding: 0 5%;
   top: -80%;
 }
+.dragon-plax1 {
+  background-image: url("/images/nose-cone3.png");
+  height: 400px;
+}
+.dragon-plax2 {
+  background-image: url("/images/spacecraft.png");
+}
+.dragon-plax3 {
+  background-image: url("/images/trunk.png");
+}
+.dragon-plax .big-stat {
+  color: white;
+  font-size: 20px;
+}
+.dragon-plax .lil-stat {
+  color: gray;
+  font-size: 15px;
+}
+.dragon-plax h4 {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+.dragon-details1 {
+  top: 5%;
+}
 
 
 @media (min-width: 992px) {
+  .dragon-desktop {
+    position: relative;
+  }
   .dragon-background a {
     font-size: 60px;
     top: -350px;
@@ -32,4 +60,70 @@
     height: 518px;
     margin-top: 80px;
   }
+  .falc-heavy-info .intro {
+
+  }
+  .drag-mini {
+    margin-bottom: 166px;
+  }
+  .inside-dragon {
+    height: 1245px;
+    background-color: #eee;
+    padding: 0 10%;
+  }
+  .inside-dragon h1 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px dashed gray;
+  }
+  .inside-dragon p {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+  .dragon-carousel {
+    height: 900px;
+    background-color: #eee;
+    text-align: center;
+    padding: 0px;
+    box-shadow: 0 2px 5px 2px rgba(0,0,0,0.25);
+  }
+  .dragon-navs a {
+    color: white;
+    border: none;
+  }
+  .nav-tabs>li.active>a {
+    background-color: #111;
+    color: white;
+    border: none;
+  }
+  .nav-tabs>li>a:hover {
+    background-color: #111;
+    color: white;
+    border: none;
+  }
+  .nav-tabs>li.active>a:hover {
+    background-color: #111;
+    color: white;
+  }
+  .drag-nav {
+    padding: 0px;
+    background: #333;
+    border: none;
+  }
+  .drag-nav>li {
+    padding: 0px;
+  }
+  .drag-nav>li>a {
+    padding: 20px 15px;
+  }
+  .tab>img {
+    width: 100%;
+  }
+  .drag-content {
+    padding-right: 5%;
+  }
+  .drag-content h5 {
+    border-bottom: 1px solid #ccc;
+  }
+
 }

@@ -141,5 +141,9 @@
     padding-left: 30px;
     margin-top: 40px;
   }
+  .desktop-only img {
+    left: 5%;
+    position: relative;
+  }
 
 }
