@@ -1,15 +1,10 @@
-
-<h1>TESTESTESTSET</h1>
-<div class="slider">
+<div class="slider container">
   <div class="slide" ng-repeat="image in images" ng-show="image.visable">
-    <img src="images/{{image.src}}" alt="">
-  </div>
-  <div class="arrows">
-    <a href="#" ng-click="prev()">
-      <img class="glyphicon glyphicon-arrow-left" alt="">
-    </a>
-    <a href="#" ng-click="next()">
-      <img class="glyphicon glyphicon-arrow-right" alt="">
-    </a>
+    <img class="col-md-12" src="images/{{image.src}}" alt="">
+    <div class="slider-content">
+      <p>{{image.date}}</p>
+      <h2>{{image.title}}</h2>
+      <p>{{image.desc}}</p>
+    </div>
   </div>
 </div>

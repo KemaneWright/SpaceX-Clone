@@ -1,28 +1,44 @@
 angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
   $scope.images = [{
     src: '/dragoncrew.8k.jpg',
-    title: 'Dragon Crew'
+    date: 'FEBRUARY 27, 2017',
+    title: 'SPACEX TO SEND PRIVATELY CREWED DRAGON SPACECRAFT BEYOND THE MOON NEXT YEAR',
+    desc: 'We are excited to announce that SpaceX has been approached to fly two private citizens on a trip around the Moon late next year. They have already paid a significant deposit to do a Moon mission.'
   }, {
     src: '/crs-10_hangar.jpg',
-    title: 'Dragon Crew'
+    date: 'FEBRUARY 20, 2017',
+    title: 'CRS-10 MISSION',
+    desc: 'At 9:39:00 am ET on February 19, 2017, SpaceX’s Falcon 9 rocket, carrying the Dragon spacecraft, lifted off from Launch Complex 39A to deliver nearly 5,500 lbs of cargo and supplies to the International Space Station.'
   }, {
     src: '/jcsat_16_39a_streak_1.jpg',
-    title: 'Dragon Crew'
+    date: 'AUGUST 14, 2016',
+    title: 'JCSAT-16 MISSION IN PHOTOS',
+    desc: 'On August 14, 2016, Falcon 9 successfully delivered the JCSAT-16 commercial communications satellite to its targeted Geosynchronous Transfer Orbit (GTO).'
   }, {
     src: '/abseut_outhor1.jpg',
-    title: 'Dragon Crew'
+    date: 'JULY 15, 2016',
+    title: 'PRESS KIT: CRS-9 DRAGON MISSION',
+    desc: 'SpaceX’s Falcon 9 rocket will launch the Dragon spacecraft to low Earth orbit to deliver critical cargo to the International Space Station (ISS) for NASA.'
   }, {
     src: '/splash_wchutes.jpg',
-    title: 'Dragon Crew'
+    date: 'MAY 11, 2016',
+    title: 'DRAGON SPLASHDOWN',
+    desc: 'Dragon successfully splashed down at 11:51 am PT in the Pacific Ocean, completing the Commercial Resupply Services 8 (CRS 8) mission which began with the liftoff of Falcon 9 and Dragon back on April 8th.'
   }, {
     src: '/jcsat_streak.jpg',
-    title: 'Dragon Crew'
+    date: 'MAY 05, 2016',
+    title: 'JCSAT-14 MISSION IN PHOTOS',
+    desc: 'On May 5, 2016, Falcon 9 launched the JCSAT-14 commercial communications satellite to a Geostationary Transfer Orbit and landed the first-stage of the rocket on a droneship in the Atlantic Ocean.'
   }, {
     src: '/26239020092_d28d741951_k_1.jpg',
-    title: 'Dragon Crew'
+    date: 'APRIL 08, 2016',
+    title: 'CRS-8 LAUNCH AND LANDING',
+    desc: 'On April 8, 2016, Falcon 9 launched Dragon on a cargo resupply mission to the International Space Station for NASA and, for the first time, landed the first-stage of the Falcon 9 back on a droneship in the Atlantic Ocean.'
   }, {
     src: '/crs6_landing_990.jpg',
-    title: 'Dragon Crew'
+    date: 'JUNE 25, 2015',
+    title: 'THE WHY AND HOW OF LANDING ROCKETS',
+    desc: 'Some of you may have been following our recent attempts to vertically land the first stage of our Falcon 9 rocket back on Earth.'
   }
   ]
 }).directive('slider', function($timeout) {
@@ -47,6 +63,14 @@ angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
         })
         scope.images[scope.currentIndex].visable = true;
       })
+      var timer;
+      var sliderFunc = function() {
+        timer = $timeout(function() {
+          scope.next()
+          timer = $timeout(sliderFunc, 1000)
+        }, 1000)
+      }
+      // sliderFunc()
     },
     templateUrl: "./directives/slider.html"
   }
