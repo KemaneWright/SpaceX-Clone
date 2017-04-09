@@ -43,6 +43,13 @@
   top: 5%;
 }
 
+.drag-mini {
+  display: none;
+}
+.inside-dragon {
+  display: none;
+}
+
 
 @media (min-width: 992px) {
   .dragon-desktop {
@@ -65,8 +72,10 @@
   }
   .drag-mini {
     margin-bottom: 166px;
+    display: block;
   }
   .inside-dragon {
+    display: block;
     height: 1245px;
     background-color: #eee;
     padding: 0 10%;

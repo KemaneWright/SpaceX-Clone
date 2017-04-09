@@ -20,13 +20,10 @@ angular.module('spaceXApp', ['ui.router'])
     })
     .state('updates', {
       url: '/updates',
-      templateUrl: './views/updates.html'
+      templateUrl: './views/updates.html',
+      controller: 'sliderCtrl'
     })
 
   $urlRouterProvider
   .otherwise('/')
-
-
-
-
 })

@@ -1,0 +1,61 @@
+.updates-nav {
+  margin-top: 60px;
+  text-align: center;
+  background-color: #ddd;
+  border-bottom: 3px solid darkblue;
+}
+#desktop-updates {
+  display: none;
+}
+.updates-nav li a {
+  color: black;
+}
+.news-block {
+  padding: 2% 3%;
+}
+.news-block p {
+  border-bottom: 1px dashed gray;
+  padding-bottom: 25px;
+}
+.spaceX-news {
+  margin-top: 15px;
+}
+.lastblock p {
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 992px) {
+  .updates-nav {
+    margin-top: 85px;
+  }
+  #desktop-updates {
+    display: block;
+  }
+
+  .slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+}
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+}
