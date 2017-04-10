@@ -105,7 +105,7 @@
     color: white;
     border: none;
   }
-  .nav-tabs>li>a:hover {
+  .dragon-carousel .nav-tabs>li>a:hover {
     background-color: #111;
     color: white;
     border: none;

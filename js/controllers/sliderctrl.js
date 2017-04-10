@@ -40,7 +40,37 @@ angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
     title: 'THE WHY AND HOW OF LANDING ROCKETS',
     desc: 'Some of you may have been following our recent attempts to vertically land the first stage of our Falcon 9 rocket back on Earth.'
   }
-  ]
+],
+  $scope.galleryImages = [{
+    src: '/orbcomm2_launch_morning2.1.jpg',
+    title: 'FALCON 9 FIRST STAGE LAND LANDING (ORBCOMM 2 MISSION) DECEMBER 2015'
+  }, {
+    src: '/pad_abort_launch_3.jpg',
+    title: 'CREW DRAGON PAD ABORT TEST MAY 2015'
+  }, {
+    src: 'v2_interior_wide.jpg',
+    title: 'CREW DRAGON MAY 2014'
+  }, {
+    src: 'falcon_9_on_pad_from_causeway_31_0_0.jpg',
+    title: 'FALCON 9 | FIRST GEOSTATIONARY TRANSFER MISSION NOVEMBER 2013'
+  }, {
+    src: 'f9-6_ocean_shot.jpg',
+    title: 'FALCON 9 DEMO FLIGHT SEPTEMBER 2013'
+  }, {
+    src: 'ghopper_325_1.png',
+    title: 'GRASSHOPPER 325M HOP JUNE 2013'
+  }, {
+    src: 'spacex_fairing_1.jpg',
+    title: 'SPACEX FAIRING SEPARATION TEST MAY 2013'
+  }, {
+    src: '6_20120531_iss031e078299.jpg',
+    title: 'FALCON 9/DRAGON COTS 2 MISSION TO THE ISS MAY 2012'
+  }, {
+    src: '1st_dragon_flight_12-10_0.jpg',
+    title: 'FIRST PRIVATE SPACECRAFT TO RETURN FROM EARTH ORBIT DECEMBER 2010'
+  }
+]
+
 }).directive('slider', function($timeout) {
   return {
     restrict: 'AE',
@@ -54,9 +84,9 @@ angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
       scope.next = function() {
         scope.currentIndex < scope.images.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
       }
-      scope.prev = function() {
-        scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
-      }
+      // scope.prev = function() {
+      //   scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
+      // }
       scope.$watch('currentIndex', function() {
         scope.images.forEach(function(image) {
           image.visable = false;

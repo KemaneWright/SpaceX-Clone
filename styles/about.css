@@ -1,0 +1,60 @@
+.about-background {
+  background-image: url('/images/spacex_about_company_01_0.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  color: white;
+  line-height: 1.3em;
+  padding: 10% 20%;
+  text-align: center;
+  position: relative;
+}
+.quick-facts {
+  height: 80px;
+  width: 80%;
+  background-color: #222;
+  position: absolute;
+  left: 10%;
+  bottom: -30px;
+  padding: 0 5%;
+}
+.about-testing {
+  height: 1500px;
+}
+.quick-facts table {
+  margin-top: 20px;
+}
+.quick-facts h3 {
+  float: left;
+  margin-right: 50px;
+}
+.quick-facts th, .quick-facts td {
+  padding: 0 30px;
+  font-size: 1.3em;
+  border-left: 1px dashed #777;
+  color: #ccc;
+}
+.about-videos {
+  height: 450px;
+  width: 80%;
+  padding: 2% 3%;
+  margin-top: 80px;
+  position: relative;
+  left: 10%;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.about-videos .vid2 {
+  float: right
+}
+.about-videos iframe {
+  padding-bottom: 35px;
+}
+.vid-border {
+  border-bottom: 1px dashed black;
+}
+.about-videos button {
+  left: 35%;
+  padding: 1% 5%;
+  top: 30px;
+  position: relative;
+}

@@ -64,7 +64,7 @@
         right: -25%;
         top: 20%;
     }
-    .btn-default {
+    #drgrtn>.btn-default {
         height: 50px;
         width: 145px;
     }
@@ -101,7 +101,7 @@
       margin-left: 6%;
       font-size: 20px;
     }
-    .btn-default {
+    #drgrtn>.btn-default {
         color: #333;
         background-color: #fff;
         border-color: #ccc;

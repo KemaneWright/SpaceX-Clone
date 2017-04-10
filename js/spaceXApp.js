@@ -21,7 +21,19 @@ angular.module('spaceXApp', ['ui.router'])
     .state('updates', {
       url: '/updates',
       templateUrl: './views/updates.html',
-      controller: 'sliderCtrl'
+      controller: 'updatesCtrl'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: './views/about.html'
+    })
+    .state('careers', {
+      url: '/careers',
+      templateUrl: './views/careers.html'
+    })
+    .state('shop', {
+      url: '/shop',
+      templateUrl: './views/shop.html'
     })
 
   $urlRouterProvider
