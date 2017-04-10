@@ -18,9 +18,6 @@
   bottom: -30px;
   padding: 0 5%;
 }
-.about-testing {
-  height: 1500px;
-}
 .quick-facts table {
   margin-top: 20px;
 }
@@ -57,4 +54,37 @@
   padding: 1% 5%;
   top: 30px;
   position: relative;
+}
+.making-history {
+  margin-top: 50px;
+  padding: 2% 10%;
+  background-color: #ddd;
+}
+.year {
+  background-color: #222;
+  color: white;
+}
+.year h1 {
+  height: 259px;
+}
+.tab img {
+  height: 450px;
+}
+.about-clone {
+  height: 800px;
+}
+.tab {
+  text-align: left;
+}
+.date {
+  margin: 35px 0 0 0;
+}
+.tab h2 {
+  margin-top: 0px;
+}
+.tab p {
+  font-size: 16px;
+}
+.bor-left {
+  border-left: 1px dashed black;
 }
