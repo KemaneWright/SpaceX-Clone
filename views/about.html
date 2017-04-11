@@ -1,163 +1,165 @@
 <div class="updates-nav">
     <ul class="container update-nav nav nav-tabs">
-        <li role="presentation" ng-click="changeNews()" class="updates-nav-item col-xs-12 col-md-6"><a>COMPANY</a></li>
-        <li role="presentation" ng-click="changeGallery()" id="desktop-updates" class="updates-nav-item col-md-6"><a>CAPABILITIES AND SERVICES</a></li>
+        <li role="presentation" ng-click="showCompany()" class="updates-nav-item col-xs-12 col-md-6"><a>COMPANY</a></li>
+        <li role="presentation" ng-click="showServices()" id="desktop-updates" class="updates-nav-item col-md-6"><a>CAPABILITIES AND SERVICES</a></li>
     </ul>
 </div>
-<div class="about-background">
-    <h2>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</h2>
-    <div class="quick-facts">
-        <h3>QUICK FACTS ABOUT SPACEX:</h3>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Founded</th>
-                    <th>Vehicles</th>
-                    <th>Manifest</th>
-                    <th>Employees</th>
-                </tr>
-                <tr>
-                    <td>2002</td>
-                    <td>3</td>
-                    <td>70+</td>
-                    <td>4,000+</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div class="about-videos">
-    <div class="vid-border">
-        <iframe class="vid1" src="https://www.youtube.com/embed/ujX6CuRELFE?rel=0" width="500" height="300"></iframe>
-        <iframe class="vid2" src="https://www.youtube.com/embed/Ndpxuf-uJHE?rel=0" width="500" height="300"></iframe>
-    </div>
-    <a href="http://www.youtube.com/spacex"><button type="button" class="view-more btn btn-default" name="button">VIEW MORE SPACEX VIDEOS</button></a>
-</div>
-<div class="making-history">
-    <h2>MAKING HISTORY</h2>
-    <p>SpaceX has gained worldwide attention for a series of historic milestones. It is the only private company ever to return a spacecraft from low-Earth orbit, which it first accomplished in December 2010. The company made history again in May 2012 when
-        its Dragon spacecraft attached to the International Space Station, exchanged cargo payloads, and returned safely to Earth — a technically challenging feat previously accomplished only by governments. Since then Dragon has delivered cargo to and
-        from the space station multiple times, providing regular cargo resupply missions for NASA.</p>
-    <div class="dragon-carousel about-clone">
-        <ul class="nav drag-nav nav-tabs">
-            <li role="presentation" ng-click="showSixteen()" class="dragon-navs col-md-2"><a>2016</a></li>
-            <li role="presentation" ng-click="showFifteen()" class="dragon-navs col-md-2"><a>2015</a></li>
-            <li role="presentation" ng-click="showFourteen()" class="dragon-navs col-md-2"><a>2014</a></li>
-            <li role="presentation" ng-click="showThirteen()" class="dragon-navs col-md-2"><a>2013</a></li>
-            <li role="presentation" ng-click="showTwelve()" class="dragon-navs col-md-2"><a>2012</a></li>
-            <li role="presentation" ng-click="showTen()" class="dragon-navs col-md-2"><a>2010</a></li>
-        </ul>
-        <div class="tab tab-16" ng-show="sixteen">
-            <img src="/images/26239020092_d28d741951_k_1.jpg" alt="">
-            <div class="year col-md-1">
-                <h1>'16</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">APRIL 2016</p>
-                <h2>DRONESHIP LANDING</h2>
-                <p>On April 8, 2016, the Falcon 9 rocket launched the Dragon spacecraft to the International Space Station, and the first-stage returned and landed on the "Of Course I Still Love You" droneship.</p>
-            </div>
-        </div>
-        <div class="tab tab-15" ng-show="fifteen">
-            <img src="/images/Ship_Landing_pad-SpaceX.jpg" alt="">
-            <div class="year col-md-1">
-                <h1>'15</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">DECEMBER 2015</p>
-                <h2>FIRST LAND LANDING</h2>
-                <p>On December 21, 2015, the Falcon 9 rocket delivered 11 communications satellites to orbit, and the first-stage returned and landed at Landing Zone 1 -– the first-ever orbital class rocket landing.</p>
-            </div>
-            <div class="bor-left col-md-3">
-                <p class="date">MAY 2015</p>
-                <h2>PAD ABORT TEST</h2>
-                <p>Crew Dragon tests launch abort system, which can provide astronauts with escape capability all the way to orbit.</p>
-            </div>
-            <div class="bor-left col-md-4">
-                <p class="date">JANUARY 2015</p>
-                <h2>DRONE SHIP LANDINGS</h2>
-                <p>SpaceX begins series of first-stage landing attempts on an autonomous spaceport drone ship.</p>
-            </div>
-        </div>
-        <div class="tab tab-14" ng-show="fourteen">
-            <img src="/images/june_2014.png" alt="">
-            <div class="year col-md-1">
-                <h1>'14</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">SEPTEMBER 2014</p>
-                <h2>SPACEX AWARDED $2.6B COMMERCIAL CREW CONTRACT</h2>
-                <p>NASA awards SpaceX contract to fly American astronauts.</p>
-            </div>
-            <div class="bor-left col-md-4">
-                <p class="date">JUNE 2014</p>
-                <h2>FALCON 9 REUSABLE TEST VEHICLE FLIES 1000M</h2>
-                <p>Vehicle completes highest leap to date, lands safely.</p>
-            </div>
-            <div class="bor-left col-md-3">
-                <p class="date">APRIL 2014</p>
-                <h2>FIRST STAGE LANDING</h2>
-                <p>Falcon 9 first stage successfully lands in Atlantic Ocean.</p>
-            </div>
-        </div>
-        <div class="tab tab-13" ng-show="thirteen">
-            <img src="/images/december_2013.jpg" alt="">
-            <div class="year col-md-1">
-                <h1>'13</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">DECEMBER 2013</p>
-                <h2>FIRST FLIGHT OF FALCON 9 TO GTO</h2>
-                <p>Falcon 9 reaches Geosynchronous Transfer Orbit</p>
-            </div>
-            <div class="bor-left col-md-4">
-                <p class="date">OCTOBER 2013</p>
-                <h2>GRASSHOPPER COMPLETES HALF-MILE FLIGHT</h2>
-                <p>The Grasshopper program finished with a 744m flight, hover, and landing.</p>
-            </div>
-        </div>
-        <div class="tab tab-12" ng-show="twelve">
-            <img src="/images/dragon_visits_station.jpg" alt="">
-            <div class="year col-md-1">
-                <h1>'12</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">MAY 2012</p>
-                <h2>DRAGON VISITS STATION</h2>
-                <p>Dragon becomes the first private spacecraft in history to visit the space station.</p>
-            </div>
-        </div>
-        <div class="tab tab-10" ng-show="ten">
-            <img src="/images/spacex_rogercarlson_img_9371.jpg" alt="">
-            <div class="year col-md-1">
-                <h1>'10</h1>
-            </div>
-            <div class="col-md-4">
-                <p class="date">DECEMBER 2010</p>
-                <h2>DRAGON RETURNS FROM EARTH ORBIT</h2>
-                <p>On December 8, 2010, Dragon became the first privately developed spacecraft in history to re-enter from low-Earth orbit.</p>
-            </div>
+<about-services ng-show="services"></about-services>
+<div ng-show="company">
+    <div class="about-background">
+        <h2>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</h2>
+        <div class="quick-facts">
+            <h3>QUICK FACTS ABOUT SPACEX:</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Founded</th>
+                        <th>Vehicles</th>
+                        <th>Manifest</th>
+                        <th>Employees</th>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td>3</td>
+                        <td>70+</td>
+                        <td>4,000+</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <h2>ADVANCING THE FUTURE</h2>
-    <p>Under a $1.6 billion contract with NASA, SpaceX is flying numerous cargo resupply missions to the International Space Station, for a total of at least 20 flights under the Commercial Resupply Services contract. In 2016, NASA awarded SpaceX a second
-        version of that contract that will cover a minimum of 6 additional flights from 2019 onward. In the near future, SpaceX will carry crew as part of NASA’s Commercial Crew Program as well. Dragon was designed from the outset to carry astronauts
-        and SpaceX is in the process of upgrading Dragon to make it crew-ready. SpaceX is the world’s fastest-growing provider of launch services and has over 70 future missions on its manifest, representing over $10 billion in contracts. These include
-        commercial satellite launches as well as NASA and other US Government missions.</p>
-    <p>Currently under development is the Falcon Heavy, which will be the world’s most powerful rocket. All the while, SpaceX continues to work toward one of its key goals—developing reusable rockets, a feat that will transform space exploration by delivering
-        highly reliable vehicles at radically reduced costs.</p>
-</div>
-<div class="container contact-spacex">
-    <div class="company-contacts col-md-12">
-      <h2 class="col-md-3">CONTACT<br>SPACEX</h2>
-      <address class="col-md-3">
+    <div class="about-videos">
+        <div class="vid-border">
+            <iframe class="vid1" src="https://www.youtube.com/embed/ujX6CuRELFE?rel=0" width="500" height="300"></iframe>
+            <iframe class="vid2" src="https://www.youtube.com/embed/Ndpxuf-uJHE?rel=0" width="500" height="300"></iframe>
+        </div>
+        <a href="http://www.youtube.com/spacex"><button type="button" class="view-more btn btn-default" name="button">VIEW MORE SPACEX VIDEOS</button></a>
+    </div>
+    <div class="making-history">
+        <h2>MAKING HISTORY</h2>
+        <p>SpaceX has gained worldwide attention for a series of historic milestones. It is the only private company ever to return a spacecraft from low-Earth orbit, which it first accomplished in December 2010. The company made history again in May 2012
+            when its Dragon spacecraft attached to the International Space Station, exchanged cargo payloads, and returned safely to Earth — a technically challenging feat previously accomplished only by governments. Since then Dragon has delivered cargo
+            to and from the space station multiple times, providing regular cargo resupply missions for NASA.</p>
+        <div class="dragon-carousel about-clone">
+            <ul class="nav drag-nav nav-tabs">
+                <li role="presentation" ng-click="showSixteen()" class="dragon-navs col-md-2"><a>2016</a></li>
+                <li role="presentation" ng-click="showFifteen()" class="dragon-navs col-md-2"><a>2015</a></li>
+                <li role="presentation" ng-click="showFourteen()" class="dragon-navs col-md-2"><a>2014</a></li>
+                <li role="presentation" ng-click="showThirteen()" class="dragon-navs col-md-2"><a>2013</a></li>
+                <li role="presentation" ng-click="showTwelve()" class="dragon-navs col-md-2"><a>2012</a></li>
+                <li role="presentation" ng-click="showTen()" class="dragon-navs col-md-2"><a>2010</a></li>
+            </ul>
+            <div class="tab tab-16" ng-show="sixteen">
+                <img src="/images/26239020092_d28d741951_k_1.jpg" alt="">
+                <div class="year col-md-1">
+                    <h1>'16</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">APRIL 2016</p>
+                    <h2>DRONESHIP LANDING</h2>
+                    <p>On April 8, 2016, the Falcon 9 rocket launched the Dragon spacecraft to the International Space Station, and the first-stage returned and landed on the "Of Course I Still Love You" droneship.</p>
+                </div>
+            </div>
+            <div class="tab tab-15" ng-show="fifteen">
+                <img src="/images/Ship_Landing_pad-SpaceX.jpg" alt="">
+                <div class="year col-md-1">
+                    <h1>'15</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">DECEMBER 2015</p>
+                    <h2>FIRST LAND LANDING</h2>
+                    <p>On December 21, 2015, the Falcon 9 rocket delivered 11 communications satellites to orbit, and the first-stage returned and landed at Landing Zone 1 -– the first-ever orbital class rocket landing.</p>
+                </div>
+                <div class="bor-left col-md-3">
+                    <p class="date">MAY 2015</p>
+                    <h2>PAD ABORT TEST</h2>
+                    <p>Crew Dragon tests launch abort system, which can provide astronauts with escape capability all the way to orbit.</p>
+                </div>
+                <div class="bor-left col-md-4">
+                    <p class="date">JANUARY 2015</p>
+                    <h2>DRONE SHIP LANDINGS</h2>
+                    <p>SpaceX begins series of first-stage landing attempts on an autonomous spaceport drone ship.</p>
+                </div>
+            </div>
+            <div class="tab tab-14" ng-show="fourteen">
+                <img src="/images/june_2014.png" alt="">
+                <div class="year col-md-1">
+                    <h1>'14</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">SEPTEMBER 2014</p>
+                    <h2>SPACEX AWARDED $2.6B COMMERCIAL CREW CONTRACT</h2>
+                    <p>NASA awards SpaceX contract to fly American astronauts.</p>
+                </div>
+                <div class="bor-left col-md-4">
+                    <p class="date">JUNE 2014</p>
+                    <h2>FALCON 9 REUSABLE TEST VEHICLE FLIES 1000M</h2>
+                    <p>Vehicle completes highest leap to date, lands safely.</p>
+                </div>
+                <div class="bor-left col-md-3">
+                    <p class="date">APRIL 2014</p>
+                    <h2>FIRST STAGE LANDING</h2>
+                    <p>Falcon 9 first stage successfully lands in Atlantic Ocean.</p>
+                </div>
+            </div>
+            <div class="tab tab-13" ng-show="thirteen">
+                <img src="/images/december_2013.jpg" alt="">
+                <div class="year col-md-1">
+                    <h1>'13</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">DECEMBER 2013</p>
+                    <h2>FIRST FLIGHT OF FALCON 9 TO GTO</h2>
+                    <p>Falcon 9 reaches Geosynchronous Transfer Orbit</p>
+                </div>
+                <div class="bor-left col-md-4">
+                    <p class="date">OCTOBER 2013</p>
+                    <h2>GRASSHOPPER COMPLETES HALF-MILE FLIGHT</h2>
+                    <p>The Grasshopper program finished with a 744m flight, hover, and landing.</p>
+                </div>
+            </div>
+            <div class="tab tab-12" ng-show="twelve">
+                <img src="/images/dragon_visits_station.jpg" alt="">
+                <div class="year col-md-1">
+                    <h1>'12</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">MAY 2012</p>
+                    <h2>DRAGON VISITS STATION</h2>
+                    <p>Dragon becomes the first private spacecraft in history to visit the space station.</p>
+                </div>
+            </div>
+            <div class="tab tab-10" ng-show="ten">
+                <img src="/images/spacex_rogercarlson_img_9371.jpg" alt="">
+                <div class="year col-md-1">
+                    <h1>'10</h1>
+                </div>
+                <div class="col-md-4">
+                    <p class="date">DECEMBER 2010</p>
+                    <h2>DRAGON RETURNS FROM EARTH ORBIT</h2>
+                    <p>On December 8, 2010, Dragon became the first privately developed spacecraft in history to re-enter from low-Earth orbit.</p>
+                </div>
+            </div>
+        </div>
+        <h2>ADVANCING THE FUTURE</h2>
+        <p>Under a $1.6 billion contract with NASA, SpaceX is flying numerous cargo resupply missions to the International Space Station, for a total of at least 20 flights under the Commercial Resupply Services contract. In 2016, NASA awarded SpaceX a second
+            version of that contract that will cover a minimum of 6 additional flights from 2019 onward. In the near future, SpaceX will carry crew as part of NASA’s Commercial Crew Program as well. Dragon was designed from the outset to carry astronauts
+            and SpaceX is in the process of upgrading Dragon to make it crew-ready. SpaceX is the world’s fastest-growing provider of launch services and has over 70 future missions on its manifest, representing over $10 billion in contracts. These include
+            commercial satellite launches as well as NASA and other US Government missions.</p>
+        <p>Currently under development is the Falcon Heavy, which will be the world’s most powerful rocket. All the while, SpaceX continues to work toward one of its key goals—developing reusable rockets, a feat that will transform space exploration by delivering
+            highly reliable vehicles at radically reduced costs.</p>
+    </div>
+    <div class="container contact-spacex">
+        <div class="company-contacts col-md-12">
+            <h2 class="col-md-3">CONTACT<br>SPACEX</h2>
+            <address class="col-md-3">
         SPACEX HEADQUARTERS
         <br>
         <span>Rocket Road</span>
         <br>
         <span>Hawthorne, California</span>
       </address>
-      <address class="col-md-3">
+            <address class="col-md-3">
         SPACEX WASHINGTON D.C.
         <br>
         <span>1030 15th Street N.W.</span>
@@ -166,7 +168,7 @@
         <br>
         <span>Washington, DC 20005-1503</span>
       </address>
-      <address class="col-md-3">
+            <address class="col-md-3">
         MEDIA INQUIRIES
         <br>
         <a href="mailto:media@spacex.com">media@spacex.com</a>
@@ -175,7 +177,8 @@
          <br>
          <a href="mailto:sales@spacex.com">sales@spacex.com</a>
       </address>
+        </div>
+        <img class="col-md-12" src="/images/spacex_company_map.png" alt="">
+        <p class="marg-bot"><em>SpaceX is a private company founded in 2002 by CEO and Lead Designer Elon Musk. The company has more than 5,000 employees at its headquarters in Hawthorne, California; launch facilities at Cape Canaveral Air Force Station, Florida, and Vandenberg Air Force Base, California; a rocket-development facility in McGregor, Texas; and offices in Houston, Texas; Chantilly, Virginia; and Washington, DC. SpaceX has suppliers in all 50 states; see our SpaceX Supplier/Contractor Policy here.</em></p>
     </div>
-    <img class="col-md-12" src="/images/spacex_company_map.png" alt="">
-    <p class="marg-bot"><em>SpaceX is a private company founded in 2002 by CEO and Lead Designer Elon Musk. The company has more than 5,000 employees at its headquarters in Hawthorne, California; launch facilities at Cape Canaveral Air Force Station, Florida, and Vandenberg Air Force Base, California; a rocket-development facility in McGregor, Texas; and offices in Houston, Texas; Chantilly, Virginia; and Washington, DC. SpaceX has suppliers in all 50 states; see our SpaceX Supplier/Contractor Policy here.</em></p>
 </div>

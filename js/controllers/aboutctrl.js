@@ -6,6 +6,18 @@ angular.module('spaceXApp').controller('aboutCtrl', function($scope) {
   $scope.twelve = false;
   $scope.ten = false;
 
+  $scope.company = true;
+  $scope.services = false;
+
+  $scope.showCompany = function() {
+    $scope.company = true;
+    $scope.services = false;
+  }
+  $scope.showServices = function() {
+    $scope.services = true;
+    $scope.company = false;
+  }
+
   $scope.showSixteen = function() {
     $scope.sixteen = true
     $scope.fifteen = false;

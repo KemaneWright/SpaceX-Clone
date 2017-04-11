@@ -110,3 +110,17 @@
 .contact-spacex .marg-bot {
   margin-bottom: 75px;
 }
+
+
+
+
+/* Services */
+.about2-background {
+  background-image: url('/images/capabilities_services_04042017.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #181C1F;
+  padding: 0 10%;
+  height: 880px;
+}
