@@ -60,6 +60,12 @@
   padding: 2% 10%;
   background-color: #ddd;
 }
+.making-history h2 {
+  margin-bottom: 30px;
+}
+.making-history p {
+  font-size: 18px;
+}
 .year {
   background-color: #222;
   color: white;
@@ -72,6 +78,8 @@
 }
 .about-clone {
   height: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .tab {
   text-align: left;
@@ -87,4 +95,18 @@
 }
 .bor-left {
   border-left: 1px dashed black;
+}
+.company-contacts {
+  padding: 3% 0;
+}
+.company-contacts h2 {
+  margin-top: 0px;
+}
+.contact-spacex img {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px dashed gray;
+}
+.contact-spacex .marg-bot {
+  margin-bottom: 75px;
 }
