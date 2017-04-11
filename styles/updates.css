@@ -47,11 +47,27 @@
 
 .spaceX-news {
     margin-top: 15px;
+    background-color: white;
 }
 
 .lastblock p {
     border: none;
 }
+.slider {
+  display: none;
+}
+.updates-news {
+  background-color: #ECECEC;
+}
+.load-news {
+  position: relative;
+  left: 34%;
+}
+
+
+
+
+
 
 @media(min-width: 992px) {
     .updates-nav {
@@ -67,10 +83,12 @@
         background: #f2f2f2;
     }
     .carousel {
-        margin-top: 45px;
+        padding-top: 45px;
+        background-color: #ECECEC;
     }
     .slider {
         position: relative;
+        display: block;
     }
     .slider-content {
         position: absolute;
@@ -101,7 +119,7 @@
     }
     .load-news {
       position: relative;
-      left: 64%;
+      left: 63%;
       top: 15px;
     }
 }

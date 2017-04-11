@@ -1,0 +1,108 @@
+.careers-background {
+  height: 660px;
+  margin-top: 85px;
+  background-color: black;
+}
+.careers-header {
+  text-align: center;
+  color: white;
+}
+.careers-header img {
+  margin-top: 75px;
+}
+.careers-header h1 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.careers-header p {
+  font-size: 16px;
+  line-height: 25px;
+  padding: 0 8%;
+}
+.careers-gray {
+  background-color: #535A60;
+  text-align: center;
+  color: white;
+  height: 1300px;
+  position: relative;
+}
+.careers-gray h3 {
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.disc {
+  height: 200px;
+  width: 200px;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  color: black;
+}
+.disc > span {
+  display: block;
+}
+.last-disc {
+  top: -25px;
+}
+.disc-content {
+  text-align: left;
+}
+.disc-content h4 {
+  color: #A8AFB6;
+}
+.disc-content p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.careers-carousel {
+  background-color: #181C1F;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+.careers-carousel p {
+  padding: 1% 20%;
+  font-size: 16px;
+  line-height: 25px;
+}
+.your-future {
+  background-color: #F0F0F0;
+  height: 600px;
+  text-align: center;
+  color: #222;
+}
+.your-future p {
+  padding: 1% 20%;
+  font-size: 16px;
+  line-height: 25px;
+}
+.career-option {
+  text-align: left;
+  padding-top: 17px;
+  height: 60px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  list-style: none;
+  font-weight: bold;
+}
+.career-option p {
+  display: none;
+  padding: 0px;
+}
+.career-option:hover {
+  background-color: black;
+  color: white;
+  padding-top: 3px;
+}
+.career-option:hover p {
+  display: block;
+}
+.career-option:hover span {
+  display: none;
+}
+.career-btns {
+  margin-top: 50px;
+}

@@ -30,7 +30,8 @@ angular.module('spaceXApp', ['ui.router'])
     })
     .state('careers', {
       url: '/careers',
-      templateUrl: './views/careers.html'
+      templateUrl: './views/careers.html',
+      controller: 'careersCtrl'
     })
     .state('shop', {
       url: '/shop',
