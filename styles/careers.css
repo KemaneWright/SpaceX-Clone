@@ -36,13 +36,26 @@
   border: none;
   border-radius: 50%;
   position: relative;
-  color: black;
+  color: white;
+  background-color: rgba(3, 3, 3, 0.4);
+}
+.disc:focus {
+  background-color: #EFEFEF;
+  color: #000000;
+  opacity: 0.6;
+  z-index: 3;
+}
+.disc1 {
+  left: 3%;
+}
+.disc2 {
+  right: 3%;
 }
 .disc > span {
   display: block;
 }
 .last-disc {
-  top: -25px;
+  top: -65px;
 }
 .disc-content {
   text-align: left;
@@ -106,3 +119,4 @@
 .career-btns {
   margin-top: 50px;
 }
+button:focus {outline:0;}
