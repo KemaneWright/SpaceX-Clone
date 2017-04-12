@@ -3,7 +3,7 @@ session = require('express-session'),
 bodyParser = require('body-parser'),
 massive = require('massive'),
 cors = require('cors'),
-config = require('./server/config');
+config = require('./config');
 
 const app = express();
 app.use(bodyParser.json());

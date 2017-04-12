@@ -1,0 +1,32 @@
+.shop-nav {
+  margin-top: 85px;
+  text-align: center;
+  padding: 0 10%;
+  background-color: #5e6266;
+  color: white;
+}
+.shop-nav ul {
+  list-style: none;
+}
+.shop-nav li {
+  padding: 2% 3%;
+}
+.shop-nav li:hover {
+  background-color: #222;
+}
+.right {
+  float: right;
+}
+.shop-background {
+  background-color: #181C1F;
+}
+.shop-content {
+  text-align: center;
+  padding: 2%;
+  background-color: #112255;
+  color: white;
+}
+.welcome-img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
