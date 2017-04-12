@@ -18,14 +18,14 @@
   top: -80%;
 }
 .dragon-plax1 {
-  background-image: url("/images/nose-cone3.png");
+  background-image: url("../images/nose-cone3.png");
   height: 400px;
 }
 .dragon-plax2 {
-  background-image: url("/images/spacecraft.png");
+  background-image: url("../images/spacecraft.png");
 }
 .dragon-plax3 {
-  background-image: url("/images/trunk.png");
+  background-image: url("../images/trunk.png");
 }
 .dragon-plax .big-stat {
   color: white;

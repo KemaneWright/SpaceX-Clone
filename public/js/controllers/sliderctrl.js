@@ -100,7 +100,7 @@ angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
           timer = $timeout(sliderFunc, 1000)
         }, 1000)
       }
-      // sliderFunc()
+      sliderFunc()
     },
     templateUrl: "./directives/slider.html"
   }

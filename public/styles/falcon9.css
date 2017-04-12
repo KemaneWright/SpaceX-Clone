@@ -48,20 +48,20 @@
 }
 
 .falc-plax1 {
-    background-image: url('/images/falcon9-render1.png');
+    background-image: url('../images/falcon9-render1.png');
 }
 
 .falc-plax2 {
-    background-image: url('/images/falcon9-render2.png');
+    background-image: url('../images/falcon9-render2.png');
 }
 
 .falc-plax3 {
-    background-image: url('/images/falcon9-render3.png');
+    background-image: url('../images/falcon9-render3.png');
     height: 800px;
 }
 
 .falc-plax4 {
-    background-image: url('/images/falcon9-render4.png');
+    background-image: url('../images/falcon9-render4.png');
 }
 
 .dark {

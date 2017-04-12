@@ -18,7 +18,7 @@
   top: -100px;
 }
 .falc-heavy-plax {
-  background-image: url("/images/falcon-heavy-render.png");
+  background-image: url("../images/falcon-heavy-render.png");
 }
 .falc-heavy-plax {
     background-attachment: fixed;

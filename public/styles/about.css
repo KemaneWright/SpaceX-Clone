@@ -1,5 +1,5 @@
 .about-background {
-    background-image: url('/images/spacex_about_company_01_0.jpg');
+    background-image: url('../images/spacex_about_company_01_0.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 550px;
@@ -140,7 +140,7 @@
 /* Services */
 
 .about2-background {
-    background-image: url('/images/capabilities_services_04042017.jpg');
+    background-image: url('../images/capabilities_services_04042017.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

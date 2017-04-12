@@ -3,11 +3,11 @@ session = require('express-session'),
 bodyParser = require('body-parser'),
 massive = require('massive'),
 cors = require('cors'),
-config = require('./config');
+config = require('./config.js');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static('../images'))
+app.use(express.static('../public'))
 app.use(session({
   resave: true,
   saveUninitialized: true,
@@ -25,12 +25,12 @@ var db = app.get('db');
 
 
 ////////////  DB SETUP ////////////
-var dbSetup = require('./services/dbSetup');
-dbSetup.run();
+// var dbSetup = require('./services/dbSetup');
+// dbSetup.run();
 
 
 ////////////  ENDPOINTS SETUP ////////////
-app.get('/api/table')  //PUT CONTROLLER FUNCTION HERE //
+// app.get('/api/table')  //PUT CONTROLLER FUNCTION HERE //
 
 
 

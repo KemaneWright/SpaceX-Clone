@@ -24,28 +24,28 @@
 //     templateUrl: "./directives/slider.html",
 //     controller: function($scope) {
 //       $scope.images = [{
-//         src: '/images/dragoncrew.8k.jpg',
+//         src: './images/dragoncrew.8k.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/crs-10_hangar.jpg',
+//         src: './images/crs-10_hangar.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/jcsat_16_39a_streak_1.jpg',
+//         src: './images/jcsat_16_39a_streak_1.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/abseut_outhor1.jpg',
+//         src: './images/abseut_outhor1.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/splash_wchutes.jpg',
+//         src: './images/splash_wchutes.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/jcsat_streak.jpg',
+//         src: './images/jcsat_streak.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/26239020092_d28d741951_k_1.jpg',
+//         src: './images/26239020092_d28d741951_k_1.jpg',
 //         title: 'Dragon Crew'
 //       }, {
-//         src: '/images/crs6_landing_990.jpg',
+//         src: './images/crs6_landing_990.jpg',
 //         title: 'Dragon Crew'
 //       }
 //       ]
