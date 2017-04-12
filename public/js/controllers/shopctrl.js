@@ -1,4 +1,4 @@
-angular.module('spaceXApp').controller('shopCtrl', function($scope) {
+angular.module('spaceXApp').controller('shopCtrl', function($scope, shopService) {
   $scope.welcome = true;
   $scope.productsPage = false;
   $scope.mens = false;
@@ -9,6 +9,9 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope) {
     $scope.welcome = false;
     $scope.mens = true;
     $scope.womens = false;
+    shopService.getProducts().then(function(res) {
+      $scope.products = res.data
+    })
   }
   $scope.showWomens = function() {
     $scope.productsPage = true;
