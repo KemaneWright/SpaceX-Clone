@@ -21,5 +21,15 @@ module.exports = {
         res.send(product)
       }
     })
+  },
+  getKids: function(req, res, next) {
+    db.get_kids([], function(err, product) {
+      if (err) {
+        return res.status(500).send(err)
+      }
+      else {
+        res.send(product)
+      }
+    })
   }
 }

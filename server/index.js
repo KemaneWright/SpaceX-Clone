@@ -43,12 +43,13 @@ var storeCtrl = require('./controllers/storectrl.js')
 ////////////  ENDPOINTS SETUP ////////////
 app.get('/api/store/men', storeCtrl.getMens)
 app.get('/api/store/women', storeCtrl.getWomens)
+app.get('/api/store/kids', storeCtrl.getKids)
 
 
 
 
 
 
-app.listen(4000, function() {
-  console.log('listening on 4000');
+app.listen(3000, function() {
+  console.log('listening on 3000');
 })

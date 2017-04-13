@@ -24,24 +24,36 @@ create table if not exists products (
 --   ('./images/products/mens/tshirts/image (15).png', 'F9 Graphic T-shirt', 22.00, 'men')
 --   ('./images/products/mens/hoodies/image.png', 'F9 Zip Hoodie', 40.00, 'men'),
 --   ('./images/products/mens/hoodies/image (2).png', 'Mission to Mars Hoodie', 40.00, 'men'),
---   ('./images/products/mens/jackets/image (1).png', 'Men''s Soft Shell Jacket', 150.00, 'men')
-    --
-    -- ('./images/products/womens/tshirts/image.png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (1).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (2).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (3).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (4).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (5).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (6).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (7).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (8).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (9).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (10).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (11).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (12).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (13).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (14).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/tshirts/image (15).png', 'Womens Item', 22.00, 'women')
-    -- ('./images/products/womens/hoodies/image.png', 'Womens Item', 40.00, 'women')
-    -- ('./images/products/womens/hoodies/image (1).png', 'Womens Item', 40.00, 'women')
-    -- ('./images/products/womens/jackets/image.png', 'Womens Item', 150.00, 'women')
+--   ('./images/products/mens/jackets/image (1).png', 'Men''s Soft Shell Jacket', 150.00, 'men'),
+--   ('./images/products/womens/tshirts/image.png', 'Women''s SES-10 Mission Patch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (1).png', 'Women''s Echostar XXIII Mission Patch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (2).png', 'Hyperloop Pod Competition 2017 T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (3).png', 'Women''s CRS-10 Mission Patch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (4).png', 'Drone Ship Landing T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (5).png', 'Women''s CRS-9 Mission Patch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (6).png', 'Women''s Iridium-1 Mission Patch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (7).png', 'F9 First Stage T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (8).png', 'Lucky Launch T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (9).png', 'SpaceX Foil V-neck', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (10).png', 'Dragon CAD T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (12).png', 'Women''s Vertical T-Shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (13).png', 'SpaceX V-neck', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (14).png', 'F9 T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/tshirts/image (15).png', 'Dragon T-shirt', 22.00, 'women'),
+--   ('./images/products/womens/hoodies/image.png', 'SpaceX Zipper Hoodie', 40.00, 'women'),
+--   ('./images/products/womens/hoodies/image (1).png', 'SpaceX Hoodie', 40.00, 'women'),
+--   ('./images/products/womens/jackets/image.png', 'Women''s Soft Shell Jacket', 150.00, 'women'),
+--   ('./images/products/kids/image.png', 'SpaceX Onesie', 13.00, 'kids'),
+--   ('./images/products/kids/image (1).png', 'Kid''s SES-10 Mission Patch T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (2).png', 'Kid''s F9 First Stage T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (3).png', 'Kid''s Occupy Mars T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (4).png', 'Kid''s SpaceX T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (5).png', 'Kid''s SpaceX T-shirt', 15.00, 'kids'),
+--   ('./images/products/kids/image (7).png', 'Kid''s Dragon T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (8).png', 'Kid''s F9 T-Shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (9).png', 'Kid''s FH T-Shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (10).png', 'Thaicom-8 Mission Patch T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (11).png', 'Landing Mission Patch T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (12).png', 'Orbcomm-2 Mission Patch T-shirt', 16.00, 'kids'),
+--   ('./images/products/kids/image (13).png', 'SpaceX Youth Hoodie', 25.00, 'kids'),
+--   ('./images/products/kids/image (14).png', 'SpaceX Youth Zipper Hoodie', 28.00, 'kids')
