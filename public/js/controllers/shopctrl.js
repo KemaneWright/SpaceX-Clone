@@ -9,8 +9,9 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, shopService)
     $scope.welcome = false;
     $scope.mens = true;
     $scope.womens = false;
-    shopService.getProducts().then(function(res) {
-      $scope.products = res.data
+    shopService.getMens().then(function(res) {
+      console.log(res)
+      $scope.mens = res.data
     })
   }
   $scope.showWomens = function() {
@@ -18,6 +19,10 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, shopService)
     $scope.welcome = false;
     $scope.mens = false;
     $scope.womens = true;
+    shopService.getWomens().then(function(res) {
+      console.log(res)
+      $scope.womens = res.data
+    })
   }
 
 

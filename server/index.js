@@ -41,14 +41,14 @@ var storeCtrl = require('./controllers/storectrl.js')
 
 
 ////////////  ENDPOINTS SETUP ////////////
-app.get('/api/store', storeCtrl.getProducts)
+app.get('/api/store/men', storeCtrl.getMens)
+app.get('/api/store/women', storeCtrl.getWomens)
 
 
 
 
 
 
-
-app.listen(8000, function() {
-  console.log('listening on 8000');
+app.listen(4000, function() {
+  console.log('listening on 4000');
 })
