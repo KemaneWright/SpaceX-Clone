@@ -1,6 +1,8 @@
 <div class="collection">
-  <h2>The Mens Collection</h2>
-  <div ng-repeat="product in products">
-    {{product.products_name}}
+  <h2>The Collection</h2>
+  <div class="product-container col-md-3" ng-repeat="product in products">
+    <img class="col-md-12" src="{{product.products_img}}" alt="">
+    <h4>{{product.products_name}}</h4>
+    <p>${{product.products_price}}.00</p>
   </div>
 </div>

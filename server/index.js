@@ -41,7 +41,7 @@ var storeCtrl = require('./controllers/storectrl.js')
 
 
 ////////////  ENDPOINTS SETUP ////////////
-app.get('/api/store', storeCtrl.getProducts)  //PUT CONTROLLER FUNCTION HERE //
+app.get('/api/store', storeCtrl.getProducts)
 
 
 
@@ -49,6 +49,6 @@ app.get('/api/store', storeCtrl.getProducts)  //PUT CONTROLLER FUNCTION HERE //
 
 
 
-app.listen(9000, function() {
-  console.log('listening on 9000');
+app.listen(8000, function() {
+  console.log('listening on 8000');
 })
