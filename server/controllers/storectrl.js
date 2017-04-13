@@ -31,5 +31,17 @@ module.exports = {
         res.send(product)
       }
     })
+  },
+  getProductDetails: function(req, res, next) {
+    db.get_product_details([req.params.id],
+    function(err, result) {
+      // console.log(res);
+      if (err) {
+        console.log(err);
+        return res.send(err);
+      }
+      // console.log(result)
+      return res.status(200).send(result)
+    })
   }
 }

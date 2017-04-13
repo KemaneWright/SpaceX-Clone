@@ -43,6 +43,18 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, shopService)
     })
   }
 
+  $scope.productId = false;
+
+  $scope.getProductDetails = function(id) {
+    $scope.productId = id;
+    $scope.productDetails = true;
+    $scope.productsPage = false;
+    $scope.products = false;
+    shopService.getProductDetails(id).then(function(res) {
+      $scope.productDetails = res.status
+      console.log(res)
+    })
+  }
 
 
 

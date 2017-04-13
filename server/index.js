@@ -44,7 +44,7 @@ var storeCtrl = require('./controllers/storectrl.js')
 app.get('/api/store/men', storeCtrl.getMens)
 app.get('/api/store/women', storeCtrl.getWomens)
 app.get('/api/store/kids', storeCtrl.getKids)
-
+app.get('/api/store/details/:id', storeCtrl.getProductDetails)
 
 
 
