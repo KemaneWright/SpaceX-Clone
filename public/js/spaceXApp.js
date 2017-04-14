@@ -38,6 +38,11 @@ angular.module('spaceXApp', ['ui.router'])
       templateUrl: './views/shop.html',
       controller: 'shopCtrl'
     })
+    // .state('productDetails', {
+    //   url: '/shop/:id',
+    //   templateUrl: './directives/productDetails.html',
+    //   controller: 'productCtrl'
+    // })
 
   $urlRouterProvider
   .otherwise('/')

@@ -3,4 +3,10 @@ angular.module('spaceXApp').directive('productDetails', function() {
     templateUrl: './directives/productDetails.html',
     restrict: 'E'
   }
+  // link: function(scope, elem, attr) {
+  //
+  // }
+  // scope: {
+  //   product: '='
+  // }
 })

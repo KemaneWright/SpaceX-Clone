@@ -36,3 +36,6 @@
 .product-container:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
+.product-details-view {
+  height: 1000px;
+}

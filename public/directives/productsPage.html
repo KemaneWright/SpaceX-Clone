@@ -1,8 +1,10 @@
 <div class="collection">
   <h2>The Collection</h2>
-  <div ng-click="getProductDetails(product)" class="product-container col-md-4" ng-repeat="product in products">
+  <div class="product-container col-md-4" ng-repeat="product in products">
+    <a ng-click="getProductDetails({product: product})">
     <img class="col-md-12" src="{{product.products_img}}" alt="">
     <h4>{{product.products_name}}</h4>
     <p>${{product.products_price}}.00</p>
+    </a>
   </div>
 </div>

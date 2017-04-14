@@ -8,7 +8,7 @@ config = require('./config.js');
 const app = module.exports = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('../public'))
+app.use(express.static('./public'))
 app.use(session({
   resave: true,
   saveUninitialized: true,
@@ -40,11 +40,11 @@ var storeCtrl = require('./controllers/storectrl.js')
 
 
 
-////////////  ENDPOINTS SETUP ////////////
+//////////// PRODUCTS ENDPOINTS  ////////////
 app.get('/api/store/men', storeCtrl.getMens)
 app.get('/api/store/women', storeCtrl.getWomens)
 app.get('/api/store/kids', storeCtrl.getKids)
-app.get('/api/store/details/:id', storeCtrl.getProductDetails)
+app.get('/api/store/:id', storeCtrl.getProductDetails)
 
 
 

@@ -1,4 +1,4 @@
-var app = require('../index.js');
+var app = require('../index');
 var db = app.get('db');
 
 module.exports = {
@@ -32,16 +32,15 @@ module.exports = {
       }
     })
   },
-  getProductDetails: function(req, res, next) {
-    db.get_product_details([req.params.id],
-    function(err, result) {
-      // console.log(res);
+  getProductDetails: function(req, res) {
+    var id = req.params.id;
+    console.log(id);
+    db.get_product_details([id], function(err, product) {
       if (err) {
-        console.log(err);
-        return res.send(err);
+        console.log(err)
       }
-      // console.log(result)
-      return res.status(200).send(result)
+      // console.log(product)
+      return res.status(200).send(product)
     })
   }
 }

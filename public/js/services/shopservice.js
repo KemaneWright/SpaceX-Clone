@@ -1,4 +1,4 @@
-angular.module('spaceXApp').service('shopService', function($http) {
+angular.module('spaceXApp').service('shopService', function($http, $state) {
 
 
     this.getMens = function() {
@@ -11,7 +11,13 @@ angular.module('spaceXApp').service('shopService', function($http) {
         return $http.get('http://localhost:3000/api/store/kids')
     }
     this.getProductDetails = function(id) {
-      return $http.get('http://localhost:3000/api/store/details/' + id)
+      return $http({
+        method: 'GET',
+        url: 'http://localhost:3000/api/store/' + id
+      }).then(function(res) {
+        console.log(res)
+        return res.data
+      })
     }
 
 })
