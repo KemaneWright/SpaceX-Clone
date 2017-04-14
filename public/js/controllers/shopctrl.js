@@ -1,6 +1,7 @@
 angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams, shopService) {
     $scope.welcome = true;
     $scope.productsPage = false;
+    $scope.detailsPage = false;
 
 
     $scope.showMens = function() {
@@ -42,6 +43,6 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
       $scope.details = res
       console.log('product id', res)
     }
-    $scope.getProductDetails($stateParams.id);
+    // $scope.getProductDetails($stateParams.id);
 
 })

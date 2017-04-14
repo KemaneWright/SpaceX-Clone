@@ -64,7 +64,7 @@
     padding: 0px 35%;
   }
   .dragon-background {
-    height: 518px;
+    height: 513px;
     margin-top: 80px;
   }
   .falc-heavy-info .intro {
@@ -90,7 +90,7 @@
     padding-top: 15px;
   }
   .dragon-carousel {
-    height: 900px;
+    height: 800px;
     background-color: #eee;
     text-align: center;
     padding: 0px;
@@ -130,6 +130,7 @@
   }
   .drag-content {
     padding-right: 5%;
+    padding-left: 3%;
   }
   .drag-content h5 {
     border-bottom: 1px solid #ccc;
