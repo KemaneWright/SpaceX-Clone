@@ -23,7 +23,7 @@
 .shop-content {
   text-align: center;
   padding: 2%;
-  background-color: #112255;
+  background-color: #212940;
   color: white;
 }
 .welcome-img {
@@ -33,9 +33,39 @@
 .product-container {
   height: 385px;
 }
+.product-container a {
+  color: white;
+}
 .product-container:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .product-details-view {
-  height: 1000px;
+  height: 600px;
+  text-align: left;
+}
+.collection h1 {
+  text-align: left;
+  padding-left: 5%;
+  font-size: 45px;
+  margin-bottom: 35px;
+}
+.green {
+  color: #9FD815;
+  margin-top: 25px;
+}
+.product-details-view input {
+  color: black;
+  width: 5%;
+}
+.product-details-view h1 {
+  margin-bottom: 10px;
+}
+.details-p {
+  margin-bottom: 55px;
+}
+.cart-btn {
+  margin-left: 30px;
+}
+.product-info {
+  margin-top:45px;
 }
