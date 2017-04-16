@@ -2,6 +2,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
     $scope.welcome = true;
     $scope.productsPage = false;
     $scope.detailsPage = false;
+    $scope.loginPage = false;
 
 
     $scope.showMens = function() {
@@ -66,4 +67,31 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
     }
     // $scope.getProductDetails($stateParams.id);
 
+
+//////// AUTH FUNCTIONS /////////
+    $scope.showLogin = function() {
+      $scope.loginPage = true;
+      $scope.welcome = false;
+      $scope.productsPage = false;
+      $scope.detailsPage = false;
+    }
+    function getUser() {
+      shopService.getUser().then(function(user) {
+        if (user) $scope.user = user.username;
+        else $scope.user = 'NOT LOGGED IN';
+      })
+    }
+    getUser()
+
+    $scope.loginLocal = function(username, password) {
+      console.log('Logging in with', username, password);
+      shopService.loginLocal({
+        username: username,
+        password: password
+      })
+      .then(function(res) {
+        getUser();
+      })
+    }
+    $scope.logout = shopService.logout;
 })

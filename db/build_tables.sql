@@ -5,6 +5,18 @@ create table if not exists products (
   products_price VARCHAR(10) NOT NULL,
   products_type text NOT NULL
 );
+
+create table if not exists users (
+  user_id serial primary key NOT NULL,
+  username text,
+  password text,
+  auth_id text
+);
+
+-- create table if not exists gallery (
+--   gallery_img VARCHAR(50) NOT NULL
+-- );
+
 -- insert into products(products_img, products_name, products_price, products_type)
 --   values
 --   ('./images/products/mens/tshirts/image.png', 'Men''s SES-10 Mission Patch T-shirt', 22, 'men'),
@@ -57,3 +69,6 @@ create table if not exists products (
 --   ('./images/products/kids/image (12).png', 'Orbcomm-2 Mission Patch T-shirt', 16, 'kids'),
 --   ('./images/products/kids/image (13).png', 'SpaceX Youth Hoodie', 25, 'kids'),
 --   ('./images/products/kids/image (14).png', 'SpaceX Youth Zipper Hoodie', 28, 'kids')
+
+
+-- insert into gallery()
