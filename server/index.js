@@ -35,44 +35,44 @@ db.build_tables(function(err, res) {
 });
 
 
-////////////  AUTH SETUP ////////////
-passport.use(new Auth0Strategy({
-        domain: config.auth0.domain,
-        clientID: config.auth0.clientID,
-        clientSecret: config.auth0.clientSecret,
-        callbackURL: '/auth/callback'
-    },
-    function(accessToken, resfeshToken, extraParams, profile, done) {
-      // Invoke one time to set things up
-      passport.serializeUser(function(userA, done) {
-          console.log('serializing', userA);
-          var userB = userA;
-          done(null, userB);
-      });
+////////////  PASSPORT SETUP ////////////
+var passport = require('./services/passport');
+app.use(passport.initialize());
+app.use(passport.session());
 
-        // Find user in DB
-        db.get_user_by_authid([profile.id], function(err, user) {
-            user = user[0];
-            if (!user) {
-                console.log('Creating User');
-                db.create_user_by_auth([profile.displayName, profile.id], function(err, user) {
-                    console.log('User Created', userA);
-                    return done(err, user[0]);
-                })
-            } else {
-                console.log('Found User', user);
-                return done(err, user);
-            }
-        })
-    }
-));
-passport.deserializeUser(function(userB, done) {
-var userC = userB;
-done(null, userC);
+///////////  PASSPORT ENDPOINTS /////////
+app.get('/auth', function(req, res, next) {
+  if (req.query.state) {
+    req.session.state = req.query.state;
+  }
+  passport.authenticate('auth0')(req, res, next);
+});
+app.get('/auth/callback', function(req, res, next) {
+  var state = 'profile';
+  if (req.session.state) {
+    state = req.session.state;
+  }
+  req.session.state = null;
+
+  passport.authenticate('auth0', {
+    successRedirect: '/#!/shop' + state,
+    failureRedirect: '/#!/shop'
+  })(req, res, next);
+})
+app.get('/api/logout', function(req, res, next) {
+  req.logout();
+  return res.status(200)
+  .send('logged out');
 })
 
+/////////// POLICIES ////////////
+var isAuthed = function(req, res, next) {
+  if (!req.isAuthenticated()) return res.status(401).send();
+  return next();
+}
+
 ////////////  CONTROLLERS ////////////
-var storeCtrl = require('./controllers/storectrl.js')
+var storeCtrl = require('./controllers/storectrl.js');
 
 
 
@@ -83,26 +83,6 @@ app.get('/api/store/men', storeCtrl.getMens)
 app.get('/api/store/women', storeCtrl.getWomens)
 app.get('/api/store/kids', storeCtrl.getKids)
 app.get('/api/store/:id', storeCtrl.getProductDetails)
-
-
-////////////  AUTH ENDPOINTS   ////////////
-app.get('/auth', passport.authenticate('auth0'));
-app.get('/auth/callback',
-    passport.authenticate('auth0', {
-        successRedirect: '/'
-    }),
-    function(req, res) {
-        res.status(200).sed(req.user);
-    })
-app.get('/auth/me', function(req, res) {
-    console.log('auth me', res);
-    if (!req.user) return res.sendStatus(404);
-    res.status(200).send(req.user);
-})
-app.get('/auth/logout', function(req, res) {
-    req.logout();
-    res.redirect('/')
-})
 
 
 app.listen(3000, function() {

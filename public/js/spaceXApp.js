@@ -1,5 +1,26 @@
 angular.module('spaceXApp', ['ui.router'])
 .config (function($stateProvider, $urlRouterProvider) {
+
+  var limitUser = function(authService, $state) {
+    return authService.getCurrentUser()
+    .then(function(response) {
+      if (!response.data) {
+        $state.go('home');
+      }
+      return response.data;
+    });
+    .catch(function(err) {
+      $state.go('home');
+    });
+  }
+  var getUser = function(authService) {
+    return authService.getCurrentUser()
+    .then(function(response) {
+      return response.data;
+    })
+  }
+
+
   $stateProvider
     .state('home', {
       url: '/',

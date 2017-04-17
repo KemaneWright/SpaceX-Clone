@@ -3,6 +3,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
     $scope.productsPage = false;
     $scope.detailsPage = false;
     $scope.loginPage = false;
+    $scope.cartPage = false;
 
 
     $scope.showMens = function() {
@@ -12,6 +13,8 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.mens = true;
         $scope.womens = false;
         $scope.kids = false;
+        $scope.loginPage = false;
+        $scope.cartPage = false;
 
         shopService.getMens().then(function(res) {
             $scope.products = res.data
@@ -25,6 +28,8 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.mens = false;
         $scope.womens = true;
         $scope.kids = false;
+        $scope.loginPage = false;
+        $scope.cartPage = false;
 
         shopService.getWomens().then(function(res) {
             $scope.products = res.data
@@ -38,6 +43,8 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.mens = false;
         $scope.womens = false;
         $scope.kids = true;
+        $scope.loginPage = false;
+        $scope.cartPage = false;
 
         shopService.getKids().then(function(res) {
             $scope.products = res.data
@@ -52,6 +59,8 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
       $scope.welcome = false;
       $scope.productsPage = false;
       $scope.detailsPage = true;
+      $scope.loginPage = false;
+      $scope.cartPage = false;
       $scope.details = res
       console.log('product id', res)
 
@@ -65,7 +74,14 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
 
 
     }
-    // $scope.getProductDetails($stateParams.id);
+
+    $scope.showCart = function() {
+      $scope.welcome = false;
+      $scope.productsPage = false;
+      $scope.detailsPage = false;
+      $scope.loginPage = false;
+      $scope.cartPage = true;
+    }
 
 
 //////// AUTH FUNCTIONS /////////
@@ -74,11 +90,12 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
       $scope.welcome = false;
       $scope.productsPage = false;
       $scope.detailsPage = false;
+      $scope.cartPage = false;
     }
     function getUser() {
       shopService.getUser().then(function(user) {
         if (user) $scope.user = user.username;
-        else $scope.user = 'NOT LOGGED IN';
+        else $scope.user = 'Please Login';
       })
     }
     getUser()

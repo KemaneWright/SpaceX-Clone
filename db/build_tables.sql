@@ -8,9 +8,23 @@ create table if not exists products (
 
 create table if not exists users (
   user_id serial primary key NOT NULL,
-  username text,
-  password text,
-  auth_id text
+  name_first text,
+  name_last text,
+  email text unique
+);
+
+create table if not exists orders (
+  order_id serial primary key,
+  user_id int,
+  completed_date text,
+  fulfilled text
+);
+
+create table if not exists product_in_order (
+  pio_id serial primary key,
+  order_id int,
+  product_id int,
+  qty int
 );
 
 -- create table if not exists gallery (
