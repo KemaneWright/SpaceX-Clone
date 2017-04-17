@@ -1,0 +1,17 @@
+ORDERS
+<br><br>
+
+<div ng-repeat="order in orders track by $index">
+  Order#: {{order.order_id}}<br>
+  Order Total: {{orderTotal(order.products) | currency}}
+  <br><br>
+
+  <div ng-repeat="product in order.products track by $index">
+    Name: {{product.name}}<br>
+    Total: {{product.price * product.qty | currency}}<br>
+    Qty: {{product.qty}}
+    <br><br>
+  </div>
+
+  <hr>
+</div>

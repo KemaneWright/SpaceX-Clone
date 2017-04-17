@@ -10,7 +10,7 @@
             <p class="details-p">{{detail.products_name}} is available for purchase in increments of 1</p>
             <p class="details-p">{{detail.products_name}}</p>
             Quanitiy: <input type="number" name="" value="1">
-            <button type="button" class="btn cart-btn btn-primary" name="button">Add To Cart</button>
+            <button type="button" ng-click="addToCart(detail.products_id, qty)" class="btn cart-btn btn-primary" name="button">Add To Cart</button>
         </div>
     </div>
 </div>

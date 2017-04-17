@@ -8,7 +8,7 @@ angular.module('spaceXApp', ['ui.router'])
         $state.go('home');
       }
       return response.data;
-    });
+    })
     .catch(function(err) {
       $state.go('home');
     });
@@ -58,6 +58,36 @@ angular.module('spaceXApp', ['ui.router'])
       url: '/shop',
       templateUrl: './views/shop.html',
       controller: 'shopCtrl'
+    })
+    .state('shop.profile', {
+      url: '/profile',
+      templateUrl: './views/profile.html',
+      controller: 'profileCtrl',
+      resolve: {
+        user: limitUser
+      }
+    })
+    .state('shop.cart', {
+      url: '/cart',
+      templateUrl: './views/cart.html',
+      controller: 'cartCtrl',
+      resolve: {
+        user: limitUser,
+        orders: function(orderService) {
+          return orderService.getOrder();
+        }
+      }
+    })
+    .state('shop.orders', {
+      url: '/orders',
+      templateUrl: './views/orders.html',
+      controller: 'ordersCtrl',
+      resolve: {
+        user: limitUser,
+        orders: function(orderService) {
+          return orderService.getHistory();
+        }
+      }
     })
     // .state('productDetails', {
     //   url: '/shop/:id',

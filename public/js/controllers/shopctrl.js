@@ -1,4 +1,4 @@
-angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams, shopService) {
+angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams, shopService, orderService) {
     $scope.welcome = true;
     $scope.productsPage = false;
     $scope.detailsPage = false;
@@ -111,4 +111,15 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
       })
     }
     $scope.logout = shopService.logout;
+
+
+    $scope.addToCart = function(products_id, qty) {
+      if (!$scope.user) {
+        location.href = '/auth?state=details/' + products_id
+      } else {
+        orderService.addToCart(products_id, qty).then(function(response) {
+          console.log(response.data)
+        })
+      }
+    }
 })

@@ -36,9 +36,9 @@ db.build_tables(function(err, res) {
 
 
 ////////////  PASSPORT SETUP ////////////
-var passport = require('./services/passport');
-app.use(passport.initialize());
-app.use(passport.session());
+// var passport = require('./services/passport');
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 ///////////  PASSPORT ENDPOINTS /////////
 app.get('/auth', function(req, res, next) {
@@ -73,10 +73,21 @@ var isAuthed = function(req, res, next) {
 
 ////////////  CONTROLLERS ////////////
 var storeCtrl = require('./controllers/storectrl.js');
+var orderCtrl = require('./controllers/orderctrl.js');
+var userCtrl = require('./controllers/userctrl.js');
 
 
+//////////// USER ENDPOINTS  ////////////
+app.get('/api/me', userCtrl.me);
+app.get('/api/user/current', isAuthed, userCtrl.update_current);
 
-
+//////////// ORDER ENDPOINTS  ////////////
+app.put('/api/order/complete', isAuthed, orderCtrl.complete, storeCtrl.getProductDetails);
+app.get('/api/order/history', isAuthed, orderCtrl.orderHistory);
+app.get('/api/order', isAuthed, storeCtrl.getProductDetails);
+app.post('/api/order/add', isAuthed, orderCtrl.addToCart);
+app.put('/api/order/update/:id', isAuthed, orderCtrl.updateItemInCart);
+app.delete('/api/order/delete/:id', isAuthed, orderCtrl.deleteFromCart);
 
 //////////// PRODUCTS ENDPOINTS  ////////////
 app.get('/api/store/men', storeCtrl.getMens)
