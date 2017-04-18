@@ -1,22 +1,41 @@
-angular.module('spaceXApp').controller('cartCtrl', function($scope, user, order, orderService) {
-  $scope.user = user;
-  $scope. order = order.data;
+angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService) {
 
-  $scope.orderTotal = orderService.orderTotal;
+  $scope.getTotal = function() {
+    console.table($scope.orderData)
+  var total = 0;
+  for (var i = 0; i < $scope.orderData.products.length; i++) {
+    total += $scope.orderData.products[i].price * $scope.orderData.products[i].qty
+  }
+  $scope.total = total;
+}
 
-  $scope.updateQty = function(id, qty) {
-    orderService.updateItem(id, qty).then(function(response) {
-      console.log('update response.data', response.data);
-    })
-  }
-  $scope.deleteProduct = function(id, i) {
-    orderService.deleteItem(id).then(function(response) {
-      console.log('delete response.data', response.data);
-    })
-  }
-  $scope.submitOrder = function() {
-    orderService.completeOrder().then(function(response) {
-      $scope.order = response.data
-    })
-  }
+$scope.getOrder = function() {
+  orderService.getOrder().then(function(response) {
+      console.table(response);
+    $scope.orderData = response;
+    $scope.getTotal();
+  });
+}
+$scope.getOrder();
+
+$scope.updateItem = function(id, qty) {
+  console.table(id, qty);
+  orderService.updateItem(id, qty).then(function(response) {
+    $scope.getTotal();
+  });
+};
+
+$scope.deleteItem = function(id) {
+  orderService.deleteItem(id).then(function(response) {
+    console.table(response);
+    $scope.getOrder();
+  });
+};
+
+$scope.submit = function() {
+  console.log('Submiting order');
+  orderService.completeOrder().then(function(response) {
+    $scope.getOrder();
+  });
+};
 })

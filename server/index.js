@@ -3,9 +3,8 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     massive = require('massive'),
     cors = require('cors'),
-    config = require('./config'),
-    passport = require('passport'),
-    Auth0Strategy = require('passport-auth0');
+    config = require('./config')
+
 
 
 const app = module.exports = express();
@@ -15,30 +14,27 @@ app.use(express.static('./public'))
 app.use(session({
     resave: true,
     saveUninitialized: true,
-    secret: config.secret
+    secret: config.SESSION_SECRET
 }))
-app.use(passport.initialize());
-app.use(passport.session());
 
 
 
-////////////  MASSIVE SETUP ////////////
-const massiveUri = config.massiveUri;
+////////////  MASSIVE AND DB SETUP ////////////
+const massiveUri = config.MASSIVE_URI;
 const massiveServer = massive.connectSync({
     connectionString: massiveUri
 });
 app.set('db', massiveServer);
 var db = app.get('db');
 
-db.build_tables(function(err, res) {
-    console.log(err)
-});
+var dbSetup = require('./services/dbSetup');
+dbSetup.run();
 
 
 ////////////  PASSPORT SETUP ////////////
-// var passport = require('./services/passport');
-// app.use(passport.initialize());
-// app.use(passport.session());
+var passport = require('./services/passport');
+app.use(passport.initialize());
+app.use(passport.session());
 
 ///////////  PASSPORT ENDPOINTS /////////
 app.get('/auth', function(req, res, next) {
@@ -55,7 +51,7 @@ app.get('/auth/callback', function(req, res, next) {
   req.session.state = null;
 
   passport.authenticate('auth0', {
-    successRedirect: '/#!/shop' + state,
+    successRedirect: '/#!/shop',
     failureRedirect: '/#!/shop'
   })(req, res, next);
 })
@@ -79,11 +75,11 @@ var userCtrl = require('./controllers/userctrl.js');
 
 //////////// USER ENDPOINTS  ////////////
 app.get('/api/me', userCtrl.me);
-app.get('/api/user/current', isAuthed, userCtrl.update_current);
+app.get('/api/user/current', isAuthed, userCtrl.update);
 
 //////////// ORDER ENDPOINTS  ////////////
 app.put('/api/order/complete', isAuthed, orderCtrl.complete, storeCtrl.getProductDetails);
-app.get('/api/order/history', isAuthed, orderCtrl.orderHistory);
+// app.get('/api/order/history', isAuthed, orderCtrl.orderHistory);
 app.get('/api/order', isAuthed, storeCtrl.getProductDetails);
 app.post('/api/order/add', isAuthed, orderCtrl.addToCart);
 app.put('/api/order/update/:id', isAuthed, orderCtrl.updateItemInCart);
@@ -95,7 +91,7 @@ app.get('/api/store/women', storeCtrl.getWomens)
 app.get('/api/store/kids', storeCtrl.getKids)
 app.get('/api/store/:id', storeCtrl.getProductDetails)
 
-
+var port = config.PORT;
 app.listen(3000, function() {
     console.log('listening on 3000');
 })

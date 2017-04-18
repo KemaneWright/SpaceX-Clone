@@ -19,6 +19,7 @@ angular.module('spaceXApp', ['ui.router'])
       return response.data;
     })
   }
+  // getUser();
 
 
   $stateProvider
@@ -57,38 +58,42 @@ angular.module('spaceXApp', ['ui.router'])
     .state('shop', {
       url: '/shop',
       templateUrl: './views/shop.html',
-      controller: 'shopCtrl'
+      controller: 'shopCtrl',
+      // resolve: {
+      //   user: getUser
+      // }
     })
-    .state('shop.profile', {
-      url: '/profile',
-      templateUrl: './views/profile.html',
-      controller: 'profileCtrl',
-      resolve: {
-        user: limitUser
-      }
-    })
+    // .state('shop.profile', {
+    //   url: '/profile',
+    //   templateUrl: './views/shop.profile.html',
+    //   controller: 'profileCtrl',
+    //   resolve: {
+    //     user: limitUser
+    //   }
+    // })
     .state('shop.cart', {
+      // parent: 'shop',
       url: '/cart',
       templateUrl: './views/cart.html',
       controller: 'cartCtrl',
-      resolve: {
-        user: limitUser,
-        orders: function(orderService) {
-          return orderService.getOrder();
-        }
-      }
+      // resolve: {
+      //   user: limitUser,
+      //   order: function(orderService) {
+      //     return orderService.getOrder();
+      //   }
+      // }
     })
-    .state('shop.orders', {
-      url: '/orders',
-      templateUrl: './views/orders.html',
-      controller: 'ordersCtrl',
-      resolve: {
-        user: limitUser,
-        orders: function(orderService) {
-          return orderService.getHistory();
-        }
-      }
-    })
+    // .state('shop.orders', {
+    //   url: '/orders',
+    //   templateUrl: './views/shop.orders.html',
+    //   controller: 'ordersCtrl',
+    //   resolve: {
+    //     user: limitUser,
+    //     orders: function(orderService) {
+    //       return orderService.getHistory();
+    //     }
+    //   }
+    // })
     // .state('productDetails', {
     //   url: '/shop/:id',
     //   templateUrl: './directives/productDetails.html',

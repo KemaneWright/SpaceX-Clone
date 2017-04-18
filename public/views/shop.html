@@ -3,11 +3,14 @@
         <li ng-click="showMens()" class="col-md-2">Mens</li>
         <li ng-click="showWomens()" class="col-md-2">Womens</li>
         <li ng-click="showKids()" class="col-md-2">Kids</li>
-        <li ng-click="showCart()" class="col-md-2 right"><span ng-click="showMens" class="glyphicon glyphicon-shopping-cart
+        <li ui-sref="shop.cart" ng-click="showCart()" class="col-md-2 right"><span ng-click="showMens" class="glyphicon glyphicon-shopping-cart
 "></span> Cart</li>
         <li ng-click="showLogin()" class="col-md-2 right">Log in</li>
     </ul>
 </div>
+
+
+
 <div class="shop-background col-md-12">
     <div class="shop-content container">
       <div ng-show="welcome">
@@ -17,7 +20,7 @@
       <products-page ng-show="productsPage"></products-page>
       <product-details ng-show="detailsPage"></product-details>
       <login ng-show="loginPage"></login>
-      <ui-view></ui-view>
+      <ui-view ng-show="cartPage"></ui-view>
     </div>
 
 </div>

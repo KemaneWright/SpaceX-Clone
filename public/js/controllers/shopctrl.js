@@ -1,4 +1,4 @@
-angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams, shopService, orderService) {
+angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams, $state, shopService, orderService) {
     $scope.welcome = true;
     $scope.productsPage = false;
     $scope.detailsPage = false;
@@ -52,74 +52,73 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
     }
 
     $scope.getProductDetails = function(res) {
-      // shopService.getProductDetails(id).then(function(res) {
-      //   console.log('productDetails ', res)
-      //   // $scope.productDetails = res[0]
-      // })
-      $scope.welcome = false;
-      $scope.productsPage = false;
-      $scope.detailsPage = true;
-      $scope.loginPage = false;
-      $scope.cartPage = false;
-      $scope.details = res
-      console.log('product id', res)
+        // shopService.getProductDetails(id).then(function(res) {
+        //   console.log('productDetails ', res)
+        //   // $scope.productDetails = res[0]
+        // })
+        $scope.welcome = false;
+        $scope.productsPage = false;
+        $scope.detailsPage = true;
+        $scope.loginPage = false;
+        $scope.cartPage = false;
+        $scope.details = res
+        console.log('product id', res)
 
-      if (res.product.products_type === 'men') {
-        $scope.back = $scope.showMens;
-      } else if (res.product.products_type === 'women') {
-        $scope.back = $scope.showWomens;
-      } else if (res.product.products_type === 'kids') {
-        $scope.back = $scope.showKids;
-      }
+        if (res.product.products_type === 'men') {
+            $scope.back = $scope.showMens;
+        } else if (res.product.products_type === 'women') {
+            $scope.back = $scope.showWomens;
+        } else if (res.product.products_type === 'kids') {
+            $scope.back = $scope.showKids;
+        }
 
 
     }
 
     $scope.showCart = function() {
-      $scope.welcome = false;
-      $scope.productsPage = false;
-      $scope.detailsPage = false;
-      $scope.loginPage = false;
-      $scope.cartPage = true;
+        $scope.welcome = false;
+        $scope.productsPage = false;
+        $scope.detailsPage = false;
+        $scope.loginPage = false;
+        $scope.cartPage = true;
     }
 
 
-//////// AUTH FUNCTIONS /////////
+    //////// AUTH FUNCTIONS /////////
     $scope.showLogin = function() {
-      $scope.loginPage = true;
-      $scope.welcome = false;
-      $scope.productsPage = false;
-      $scope.detailsPage = false;
-      $scope.cartPage = false;
+        $scope.loginPage = true;
+        $scope.welcome = false;
+        $scope.productsPage = false;
+        $scope.detailsPage = false;
+        $scope.cartPage = false;
     }
-    function getUser() {
-      shopService.getUser().then(function(user) {
-        if (user) $scope.user = user.username;
-        else $scope.user = 'Please Login';
-      })
-    }
-    getUser()
-
-    $scope.loginLocal = function(username, password) {
-      console.log('Logging in with', username, password);
-      shopService.loginLocal({
-        username: username,
-        password: password
-      })
-      .then(function(res) {
-        getUser();
-      })
-    }
-    $scope.logout = shopService.logout;
-
-
-    $scope.addToCart = function(products_id, qty) {
-      if (!$scope.user) {
-        location.href = '/auth?state=details/' + products_id
-      } else {
-        orderService.addToCart(products_id, qty).then(function(response) {
-          console.log(response.data)
-        })
-      }
+    // function getUser() {
+    //   shopService.getUser().then(function(user) {
+    //     if (user) {
+    //       $scope.user = user.first_name;
+    //     }
+    //     else $scope.user = 'Please Login';
+    //   })
+    // }
+    // getUser()
+    //
+    // $scope.loginLocal = function(username, password) {
+    //   console.log('Logging in with', username, password);
+    //   shopService.loginLocal({
+    //     username: username,
+    //     password: password
+    //   })
+    //   .then(function(res) {
+    //     getUser();
+    //   })
+    // }
+    // $scope.logout = shopService.logout;
+    //
+    //
+    $scope.addToCart = function(id, qty) {
+        orderService.addToCart(id, qty).then(function(response) {
+            console.log(response);
+            $state.go("shop.cart")
+        });
     }
 })

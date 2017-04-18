@@ -1,64 +1,49 @@
 angular.module('spaceXApp').service('orderService', function($http) {
 
   this.addToCart = function(id, qty) {
-    return $http ({
+    return $http({
       method: 'POST',
       url: '/api/order/add',
       data: {
         product_id: id,
         qty: qty
       }
-    })
-  }
+    });
+  };
 
   this.getOrder = function() {
-    return $http ({
-      method:'GET',
+    return $http({
+      method: 'GET',
       url: '/api/order'
-    })
-  }
+    }).then(function(response) {
+      // console.log(response);
+      return response.data
+    });
+  };
 
   this.updateItem = function(id, qty) {
-    return $http ({
+    return $http({
       method: 'PUT',
       url: '/api/order/update/' + id,
       data: {
         qty: qty
       }
-    })
-  }
+    });
+  };
 
   this.deleteItem = function(id) {
-    return $http ({
+    return $http({
       method: 'DELETE',
       url: '/api/order/delete/' + id
-    })
-  }
+    });
+  };
 
   this.completeOrder = function() {
-    return $http ({
+    return $http({
       method: 'PUT',
       url: '/api/order/complete'
-    })
+    });
   }
-
-  this.getHistory = function() {
-    return $http ({
-      method: 'GET',
-      url: '/api/order/history'
-    })
-  }
-
-  this.orderTotal = function(products) {
-    var total = 0;
-
-    for (var i = 0; i < products.length; i++) {
-      total += products[i].products_price * products[i].qty
-    }
-    return total;
-  }
-
-
 
 
 })
