@@ -1,139 +1,185 @@
 .dragon-background {
-  text-align: center;
-  margin-top: 60px;
-  width: 100%;
-  position: relative;
-  height: 135px;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    position: relative;
+    height: 135px;
 }
+
 .dragon-background a {
-  font-size: 30px;
-  top: -100px;
+    font-size: 30px;
+    top: -100px;
 }
+
 .dragonHeader {
-  font-size: 23px;
-  margin-top: 10px;
-  color: white;
-  position: relative;
-  padding: 0 5%;
-  top: -80%;
+    font-size: 23px;
+    margin-top: 10px;
+    color: white;
+    position: relative;
+    padding: 0 5%;
+    top: -80%;
 }
+
 .dragon-plax1 {
-  background-image: url("../images/nose-cone3.png");
-  height: 400px;
+    background-image: url("../images/nose-cone3.png");
+    height: 400px;
 }
+
 .dragon-plax2 {
-  background-image: url("../images/spacecraft.png");
+    background-image: url("../images/spacecraft.png");
 }
+
 .dragon-plax3 {
-  background-image: url("../images/trunk.png");
+    background-image: url("../images/trunk.png");
 }
+
 .dragon-plax .big-stat {
-  color: white;
-  font-size: 20px;
+    color: white;
+    font-size: 20px;
 }
+
 .dragon-plax .lil-stat {
-  color: gray;
-  font-size: 15px;
+    color: gray;
+    font-size: 15px;
 }
+
 .dragon-plax h4 {
-  border-bottom: 2px solid white;
-  padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
 }
+
 .dragon-details1 {
-  top: 5%;
+    top: 5%;
 }
 
 .drag-mini {
-  display: none;
-}
-.inside-dragon {
-  display: none;
+    display: none;
 }
 
+.inside-dragon {
+    display: none;
+}
 
 @media (min-width: 992px) {
-  .dragon-desktop {
-    position: relative;
-  }
-  .dragon-background a {
-    font-size: 60px;
-    top: -350px;
-  }
-  .dragonHeader {
-    font-size: 45px;
-    padding: 0px 35%;
-  }
-  .dragon-background {
-    height: 513px;
-    margin-top: 80px;
-  }
-  .falc-heavy-info .intro {
+    .dragon-desktop {
+        position: relative;
+    }
+    .dragon-background a {
+        font-size: 60px;
+        top: -350px;
+    }
+    .dragonHeader {
+        font-size: 45px;
+        padding: 0px 35%;
+    }
+    .dragon-background {
+        height: 513px;
+        margin-top: 80px;
+    }
+    .drag-mini {
+        margin-bottom: 166px;
+        display: block;
+    }
+    .inside-dragon {
+        display: block;
+        height: 1245px;
+        background-color: #eee;
+        padding: 0 10%;
+    }
+    .inside-dragon h1 {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px dashed gray;
+    }
+    .inside-dragon p {
+        font-size: 16px;
+        padding-top: 15px;
+    }
+    .dragon-carousel {
+        height: 800px;
+        background-color: #eee;
+        text-align: center;
+        padding: 0px;
+        box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.25);
+    }
+    .dragon-navs a {
+        color: white;
+        border: none;
+    }
+    .nav-tabs>li.active>a {
+        background-color: #111;
+        color: white;
+        border: none;
+    }
+    .dragon-carousel .nav-tabs>li>a:hover {
+        background-color: #111;
+        color: white;
+        border: none;
+    }
+    .nav-tabs>li.active>a:hover {
+        background-color: #111;
+        color: white;
+    }
+    .drag-nav {
+        padding: 0px;
+        background: #333;
+        border: none;
+    }
+    .drag-nav>li {
+        padding: 0px;
+    }
+    .drag-nav>li>a {
+        padding: 20px 15px;
+    }
+    .tab>img {
+        width: 100%;
+    }
+    .drag-content {
+        padding-right: 5%;
+        padding-left: 3%;
+    }
+    .drag-content h5 {
+        border-bottom: 1px solid #ccc;
+    }
+    .dragon-desktop-parallax {
+      height: 1200px;
+    }
+    .parallax-wrap {
+      position: relative;
+      left: 40%;
 
-  }
-  .drag-mini {
-    margin-bottom: 166px;
-    display: block;
-  }
-  .inside-dragon {
-    display: block;
-    height: 1245px;
-    background-color: #eee;
-    padding: 0 10%;
-  }
-  .inside-dragon h1 {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-bottom: 1px dashed gray;
-  }
-  .inside-dragon p {
-    font-size: 16px;
-    padding-top: 15px;
-  }
-  .dragon-carousel {
-    height: 800px;
-    background-color: #eee;
-    text-align: center;
-    padding: 0px;
-    box-shadow: 0 2px 5px 2px rgba(0,0,0,0.25);
-  }
-  .dragon-navs a {
-    color: white;
-    border: none;
-  }
-  .nav-tabs>li.active>a {
-    background-color: #111;
-    color: white;
-    border: none;
-  }
-  .dragon-carousel .nav-tabs>li>a:hover {
-    background-color: #111;
-    color: white;
-    border: none;
-  }
-  .nav-tabs>li.active>a:hover {
-    background-color: #111;
-    color: white;
-  }
-  .drag-nav {
-    padding: 0px;
-    background: #333;
-    border: none;
-  }
-  .drag-nav>li {
-    padding: 0px;
-  }
-  .drag-nav>li>a {
-    padding: 20px 15px;
-  }
-  .tab>img {
-    width: 100%;
-  }
-  .drag-content {
-    padding-right: 5%;
-    padding-left: 3%;
-  }
-  .drag-content h5 {
-    border-bottom: 1px solid #ccc;
-  }
+    }
+    .nose {
+        background-image: url('../images/nose-cone3.png');
+        width: 142px;
+        height: 68px;
+        z-index: 5;
+        left: 50px;
+        position: absolute;
 
+    }
+    .dragon-spacecraft {
+      background-image: url('../images/spacecraft.png');
+      width: 243px;
+      height: 223px;
+      z-index: 2;
+      position: absolute;
+      top: 41px;
+    }
+    .trunk {
+      background-image: url('../images/trunk.png');
+      width: 243px;
+      height: 203px;
+      z-index: 3;
+      position: absolute;
+      top: 212px;
+    }
+    .solar-sequence {
+      background-image: url('../images/solar-sequence.png');
+      width: 1024px;
+      height: 240px;
+      z-index: 3;
+      position: absolute;
+      top: 188px;
+    }
 }
