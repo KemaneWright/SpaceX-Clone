@@ -142,7 +142,7 @@
         border-bottom: 1px solid #ccc;
     }
     .dragon-desktop-parallax {
-      height: 1200px;
+      height: 1500px;
     }
     .parallax-wrap {
       position: relative;
@@ -155,6 +155,7 @@
         height: 68px;
         z-index: 5;
         left: 50px;
+        top: 50px;
         position: absolute;
 
     }
@@ -176,10 +177,42 @@
     }
     .solar-sequence {
       background-image: url('../images/solar-sequence.png');
+      background-position: center;
+      background-repeat: no-repeat;
       width: 1024px;
       height: 240px;
-      z-index: 3;
+      left: -393px;
+      z-index: 2;
       position: absolute;
       top: 188px;
     }
+
+    .desktop-falc .bor-bot {
+      border-bottom: 1px solid white;
+      padding-bottom: 3%;
+      margin-bottom: 10px;
+    }
+    .drag-right {
+      top: 53px;
+    }
+    .desktop-falc .marg-top {
+      margin-top: 60px;
+    }
+    .bigP {
+      font-size: 17px;
+    }
+    .super-marg-top {
+      margin-top: 185px;
+      margin-bottom: 60px;
+    }
+
+
+
+
+
+
+
+
+
+
 }
