@@ -70,9 +70,12 @@
 }
 .careers-carousel {
   background-color: #181C1F;
-  height: 500px;
+  height: 700px;
   text-align: center;
   color: white;
+}
+.careers-carousel h2 {
+  margin-top: 50px;
 }
 .careers-carousel p {
   padding: 1% 20%;
@@ -120,3 +123,57 @@
   margin-top: 50px;
 }
 button:focus {outline:0;}
+
+
+.slideshow {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  top: -5px;
+  box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.6);
+}
+.images {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  animation: slideshow 60s linear infinite;
+  transform: translate3d(0, 0, 0);
+  text-align: left;
+}
+.images img {
+  vertical-align: top;
+  padding: 0 5px;
+  width: 480px;
+}
+.slideshow-small {
+  position: relative;
+  overflow: hidden;
+  height: 115px;
+  margin-top: 40px;
+}
+.images-small {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  animation: slideshow 65s linear infinite;
+  transform: translate3d(0, 0, 0);
+  text-align: left;
+}
+.images-small img {
+  vertical-align: top;
+  padding: 0 5px;
+  width: 240px;
+}
+@keyframes slideshow {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+}
+@keyframes moveSlideshow {
+  100% {
+    -webkit-transform: translateX(-200%);
+  }
+}

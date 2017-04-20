@@ -3,7 +3,7 @@ $(window).scroll(function() {
 
     //commented out console.log so it's not
     //logging all the time! Uncomment to debug.
-    console.log(winScroll);
+    // console.log(winScroll);
     var parallaxRatio = 850;
     //parallaxRatio variable not fully implemented yet
     // ^^ DO NOT USE ^^
@@ -77,144 +77,155 @@ $(window).scroll(function() {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 4000
-        });
-    };
-    if (winScroll > parallaxRatio + 710) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 5000
+            'background-position': - 4096
         });
     };
     if (winScroll > parallaxRatio + 720) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 6000
-        });
-    };
-    if (winScroll > parallaxRatio + 730) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 7000
+            'background-position': - 5120
         });
     };
     if (winScroll > parallaxRatio + 740) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 8000
-        });
-    };
-    if (winScroll > parallaxRatio + 750) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 9000
+            'background-position': - 6144
         });
     };
     if (winScroll > parallaxRatio + 760) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 10000
-        });
-    };
-    if (winScroll > parallaxRatio + 770) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 11000
+            'background-position': - 7168
         });
     };
     if (winScroll > parallaxRatio + 780) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 12000
-        });
-    };
-    if (winScroll > parallaxRatio + 790) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 13000
+            'background-position': - 8192
         });
     };
     if (winScroll > parallaxRatio + 800) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 14000
-        });
-    };
-    if (winScroll > parallaxRatio + 810) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 15000
+            'background-position': - 9216
         });
     };
     if (winScroll > parallaxRatio + 820) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 16000
-        });
-    };
-    if (winScroll > parallaxRatio + 830) {
-        $('.solar-sequence').css({
-            'position': 'fixed',
-            'top': 472,
-            'background-position': - 17000
+            'background-position': - 10240
         });
     };
     if (winScroll > parallaxRatio + 840) {
         $('.solar-sequence').css({
             'position': 'fixed',
             'top': 472,
-            'background-position': - 26000
+            'background-position': - 11264
         });
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // if (winScroll > parallaxRatio + 000) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 0000
+    //     });
+    // };
+    if (winScroll > parallaxRatio + 860) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 13312
+        });
+    };
+    // if (winScroll > parallaxRatio + 000) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 0000
+    //     });
+    // };
+    if (winScroll > parallaxRatio + 880) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 15360
+        });
+    };
+    if (winScroll > parallaxRatio + 900) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 17408
+        });
+    };
+    if (winScroll > parallaxRatio + 920) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 19456
+        });
+    };
+    if (winScroll > parallaxRatio + 940) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 21504
+        });
+    };
+    if (winScroll > parallaxRatio + 960) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 472,
+            'background-position': - 23552
+        });
+    };
+    // if (winScroll > parallaxRatio + 1000) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 25600
+    //     });
+    // };
+    // if (winScroll > parallaxRatio + 810) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 15525
+    //     });
+    // };
+    // if (winScroll > parallaxRatio + 820) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 16525
+    //     });
+    // };
+    // if (winScroll > parallaxRatio + 830) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': - 17525
+    //     });
+    // };
+    // if (winScroll > parallaxRatio + 840) {
+    //     $('.solar-sequence').css({
+    //         'position': 'fixed',
+    //         'top': 472,
+    //         'background-position': -19525
+    //     });
+    // };
     // Solar Final
-    if (winScroll > parallaxRatio + 1004) {
+    if (winScroll > parallaxRatio + 970) {
         $('.solar-sequence').css({
             'position': 'absolute',
-            'top': 1240,
+            'top': 1200,
             'left': -393
         });
       }
-   // if (winScroll > 50) {
-    //     $('.solar-sequence').css({
-    //         'position': 'absolute',
-    //         'top': '1515px'
-    //     });
-    // }
-    // if (winScroll > 150) {
-    //     $('.solar-sequence').css({
-    //         'position': 'fixed',
-    //         'top': '241px'
-    //     });
-    // }
-    // if (winScroll > 200) {
-    //     $('.solar-sequence').css({
-    //         'position': 'absolute',
-    //         'top': '1670px'
-    //     });
-    // }
 })

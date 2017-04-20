@@ -59,6 +59,8 @@
   }
   .desktop-only {
     display: block;
+    background-color: #F7F7F7;
+    padding: 3% 15%;
   }
   .falcheavyHead {
     font-size: 45px;
@@ -135,15 +137,13 @@
   .falcHeavy-info {
     height: 1600px;
     position: relative;
-    padding-top: 50px;
+  }
+  .falcHeavy-info h2 {
+    margin-top: 0px;
   }
   .falcHeavy-milestone-head {
     padding-left: 30px;
     margin-top: 40px;
-  }
-  .desktop-only img {
-    left: 5%;
-    position: relative;
   }
 
 }
