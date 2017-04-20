@@ -92,6 +92,6 @@ app.get('/api/store/kids', storeCtrl.getKids)
 app.get('/api/store/:id', storeCtrl.getProductDetails)
 
 var port = config.PORT;
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log('listening on 3000');
 })
