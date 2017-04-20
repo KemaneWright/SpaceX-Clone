@@ -147,7 +147,7 @@
     .parallax-wrap {
       position: relative;
       left: 40%;
-      width: 680;
+      width: 680px;
     }
     .nose {
         background-image: url('../images/nose-cone3.png');

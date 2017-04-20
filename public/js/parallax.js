@@ -24,7 +24,7 @@ $(window).scroll(function() {
     if (winScroll > parallaxRatio) {
         $('.dragon-spacecraft').css({
             'position': 'fixed',
-            'top': 325
+            'top': 355
         });
     } else {
         $('.dragon-spacecraft').css({
@@ -43,7 +43,7 @@ $(window).scroll(function() {
     if (winScroll > parallaxRatio) {
         $('.trunk').css({
             'position': 'fixed',
-            'top': 497
+            'top': 527
         });
     } else {
         $('.trunk').css({
@@ -54,7 +54,7 @@ $(window).scroll(function() {
     if (winScroll > parallaxRatio + 625) {
         $('.trunk').css({
             'position': 'absolute',
-            'top': 890
+            'top': 885
         });
       }
 
@@ -62,7 +62,7 @@ $(window).scroll(function() {
     if (winScroll > parallaxRatio) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'left': 213
         });
     } else {
@@ -76,112 +76,112 @@ $(window).scroll(function() {
     if (winScroll > parallaxRatio + 700) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 4096
         });
     };
     if (winScroll > parallaxRatio + 720) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 5120
         });
     };
     if (winScroll > parallaxRatio + 740) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 6144
         });
     };
     if (winScroll > parallaxRatio + 760) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 7168
         });
     };
     if (winScroll > parallaxRatio + 780) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 8192
         });
     };
     if (winScroll > parallaxRatio + 800) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 9216
         });
     };
     if (winScroll > parallaxRatio + 820) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 10240
         });
     };
     if (winScroll > parallaxRatio + 840) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 11264
         });
     };
     // if (winScroll > parallaxRatio + 000) {
     //     $('.solar-sequence').css({
     //         'position': 'fixed',
-    //         'top': 472,
+    //         'top': 501,
     //         'background-position': - 0000
     //     });
     // };
     if (winScroll > parallaxRatio + 860) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 13312
         });
     };
     // if (winScroll > parallaxRatio + 000) {
     //     $('.solar-sequence').css({
     //         'position': 'fixed',
-    //         'top': 472,
+    //         'top': 501,
     //         'background-position': - 0000
     //     });
     // };
     if (winScroll > parallaxRatio + 880) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 15360
         });
     };
     if (winScroll > parallaxRatio + 900) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 17408
         });
     };
     if (winScroll > parallaxRatio + 920) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 19456
         });
     };
     if (winScroll > parallaxRatio + 940) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 21504
         });
     };
     if (winScroll > parallaxRatio + 960) {
         $('.solar-sequence').css({
             'position': 'fixed',
-            'top': 472,
+            'top': 501,
             'background-position': - 23552
         });
     };

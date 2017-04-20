@@ -115,10 +115,18 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
     // $scope.logout = shopService.logout;
     //
     //
+    // $scope.cartItems = [];
     $scope.addToCart = function(id, qty) {
         orderService.addToCart(id, qty).then(function(response) {
             console.log(response);
+            // $scope.cartItems.push(response.config.data);
             $state.go("shop.cart")
         });
     }
+
+    // if ($scope.cartItems.length === 0) {
+    //   $scope.itemInCart = false;
+    // } else {
+    //   $scope.itemInCart = true;
+    // }
 })
