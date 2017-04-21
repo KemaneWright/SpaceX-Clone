@@ -1,14 +1,14 @@
 <div class="product-details-view collection">
     <button ng-click="back()" type="button" class="btn btn-default" name="button">Back</button>
     <div class="col-md-12" ng-repeat="detail in details">
-        <img class="col-md-6" src="{{detail.products_img}}" alt="">
+        <img class="col-md-6" src="{{detail.img}}" alt="">
         <div class="product-info">
-            <h1>{{detail.products_name}}</h1>
+            <h1>{{detail.name}}</h1>
             <p>Be the first to review this product</p>
-            <h2>${{detail.products_price}}.00</h2>
+            <h2>${{detail.price}}.00</h2>
             <p class="green">IN STOCK</p>
-            <p class="details-p">{{detail.products_name}} is available for purchase in increments of 1</p>
-            <p class="details-p">{{detail.products_name}}</p>
+            <p class="details-p">{{detail.name}} is available for purchase in increments of 1</p>
+            <p class="details-p">{{detail.name}}</p>
             Quanitiy: <input type="number" name="" value="1" min="1" ng-model="qty">
             <button type="button" ng-click="addToCart(detail.products_id, qty)" class="btn cart-btn btn-primary" name="button">Add To Cart</button>
         </div>

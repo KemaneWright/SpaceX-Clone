@@ -2,9 +2,9 @@
   <h1 ng-show="mens">MENS</h1><h1 ng-show="womens">WOMENS</h1><h1 ng-show="kids">KIDS</h1>
   <div class="product-container col-md-4" ng-repeat="product in products">
     <a ng-click="getProductDetails({product: product})">
-    <img class="col-md-12" src="{{product.products_img}}" alt="">
-    <h4>{{product.products_name}}</h4>
-    <p>${{product.products_price}}.00</p>
+    <img class="col-md-12" src="{{product.img}}" alt="">
+    <h4>{{product.name}}</h4>
+    <p>${{product.price}}.00</p>
     </a>
   </div>
 </div>

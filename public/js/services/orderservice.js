@@ -16,7 +16,7 @@ angular.module('spaceXApp').service('orderService', function($http) {
       method: 'GET',
       url: '/api/order'
     }).then(function(response) {
-      // console.log(response);
+      console.log('Get Order: ', response);
       return response.data
     });
   };

@@ -4,7 +4,7 @@ Total: {{orderTotal(order.products) | currency}}<br>
 <button type="button" ng-click="submitOrder()">Submit Order</button>
 <br><br>
 
-<div ng-repeat="product in order.products track by $index">
+<div ng-repeat="product in orderData.products track by $index">
   {{product.name}}
   {{product.price * product.qty | currency}}
   <input type="number" min="1" ng-model="product.qty" ng-change="updateQty(product.pio_id, product.qty)">

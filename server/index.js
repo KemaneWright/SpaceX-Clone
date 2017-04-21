@@ -3,8 +3,9 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     massive = require('massive'),
     cors = require('cors'),
-    config = require('./config')
-
+    config = require('./config'),
+    passport = require('passport'),
+    auth0 = require('passport-auth0');
 
 
 const app = module.exports = express();
@@ -32,39 +33,82 @@ dbSetup.run();
 
 
 ////////////  PASSPORT SETUP ////////////
-var passport = require('./services/passport');
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.use(new auth0(config.AUTH_CONFIG, function(accessToken, refreshToken, extraParams, profile, done) {
+    db.user.email([profile.displayName], function(err, user) {
+        if (err) {
+            return done(err);
+        }
+        else if (!user.length) {
+            db.user.create([profile.nickname, profile.displayName], function(err, user) {
+                if (err) {
+                    return done(err);
+                }
+                console.log('User created');
+
+                db.order.insert([user[0].user_id], function(err, order) {
+                    if (err) {
+                        console.log('DB Create, durring user create: ', err);
+                    }
+
+                    user[0].order_id = order[0].order_id;
+                    return done(null, user[0]);
+                })
+            })
+        } else {
+            console.log('User found');
+            db.order.read_incomplete([user[0].user_id], function(err, order) {
+                if (err) {
+                    return console.log("Find User Auth, Order not found", err);
+                }
+
+                console.log('order: ', order);
+                user[0].order_id = order[0].order_id;
+                return done(null, user[0]);
+            });
+        }
+    });
+
+}));
+
+passport.serializeUser(function(user, done) {
+    done(null, user);
+});
+passport.deserializeUser(function(user, done) {
+    done(null, user);
+});
+
 ///////////  PASSPORT ENDPOINTS /////////
 app.get('/auth', function(req, res, next) {
-  if (req.query.state) {
-    req.session.state = req.query.state;
-  }
-  passport.authenticate('auth0')(req, res, next);
+    if (req.query.state) {
+        req.session.state = req.query.state;
+    }
+    passport.authenticate('auth0')(req, res, next);
 });
 app.get('/auth/callback', function(req, res, next) {
-  var state = 'profile';
-  if (req.session.state) {
-    state = req.session.state;
-  }
-  req.session.state = null;
+    var state = 'profile';
+    if (req.session.state) {
+        state = req.session.state;
+    }
+    req.session.state = null;
 
-  passport.authenticate('auth0', {
-    successRedirect: '/#!/shop',
-    failureRedirect: '/#!/shop'
-  })(req, res, next);
+    passport.authenticate('auth0', {
+        successRedirect: '/#!/shop',
+        failureRedirect: '/#!/shop'
+    })(req, res, next);
 })
 app.get('/api/logout', function(req, res, next) {
-  req.logout();
-  return res.status(200)
-  .send('logged out');
+    req.logout();
+    return res.status(200)
+        .send('logged out');
 })
 
 /////////// POLICIES ////////////
 var isAuthed = function(req, res, next) {
-  if (!req.isAuthenticated()) return res.status(401).send();
-  return next();
+    if (!req.isAuthenticated()) return res.status(401).send();
+    return next();
 }
 
 ////////////  CONTROLLERS ////////////

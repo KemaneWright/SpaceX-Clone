@@ -1,15 +1,14 @@
 create table if not exists products (
-  products_id serial primary key NOT NULL,
-  products_img VARCHAR(50) NOT NULL,
-  products_name text NOT NULL,
-  products_price VARCHAR(10) NOT NULL,
-  products_type text NOT NULL
+  id serial primary key NOT NULL,
+  img VARCHAR(50) NOT NULL,
+  name text NOT NULL,
+  price VARCHAR(10) NOT NULL,
+  type text NOT NULL
 );
 
 create table if not exists users (
   user_id serial primary key NOT NULL,
-  name_first text,
-  name_last text,
+  name text,
   email text unique
 );
 
@@ -31,7 +30,7 @@ create table if not exists product_in_order (
 --   gallery_img VARCHAR(50) NOT NULL
 -- );
 
--- insert into products(products_img, products_name, products_price, products_type)
+-- insert into products(img, name, price, type)
 --   values
 --   ('./images/products/mens/tshirts/image.png', 'Men''s SES-10 Mission Patch T-shirt', 22, 'men'),
 --   ('./images/products/mens/tshirts/image (1).png', 'Men''s CRS-9 Mission Patch T-shirt', 22, 'men'),

@@ -1,1 +1,1 @@
-select * from products where products.products_type = 'kids'
+select * from products where products.type = 'kids'

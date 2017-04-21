@@ -1,1 +1,1 @@
-select * from products where products.products_type = 'men'
+select * from products where products.type = 'men'
