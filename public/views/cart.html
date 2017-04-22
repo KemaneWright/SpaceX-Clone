@@ -4,14 +4,15 @@
 <form ng-submit='charge(payment)' class='col-xs-4'>
     <h1>Angular-Stripe w/ Custom Form</h1><br><br>
     <section class='form-group'>
-      <label>Price to charge:</label>
+      <label>Total:</label>
       <input
       class='form-control'
       type="text"
       name=""
       ng-model='mockPrice'
-      placeholder="type in '5.95'"
+      placeholder="{{total | currency}}'"
       required>
+      <!-- <div ng-model='mockPrice'>${{total}}.00</div> -->
     </section>
     <section class='form-group'>
         <label>Name on card:</label>

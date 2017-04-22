@@ -7,6 +7,7 @@ angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService
             total += $scope.orderData.products[i].price * $scope.orderData.products[i].qty
         }
         $scope.total = total;
+        console.log($scope.total)
     }
 
     $scope.getOrder = function() {
