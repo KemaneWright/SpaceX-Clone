@@ -1,5 +1,7 @@
-angular.module('spaceXApp', ['ui.router'])
-.config (function($stateProvider, $urlRouterProvider) {
+angular.module('spaceXApp', ['ui.router', 'angular-stripe'])
+.config (function($stateProvider, $urlRouterProvider, stripeProvider) {
+
+  stripeProvider.setPublishableKey('pk_test_h2qUyp2knoRVuuBtnXzYKqyf');
 
   var limitUser = function(authService, $state) {
     return authService.getCurrentUser()
@@ -75,13 +77,17 @@ angular.module('spaceXApp', ['ui.router'])
       // parent: 'shop',
       url: '/cart',
       templateUrl: './views/cart.html',
-      controller: 'cartCtrl',
+      controller: 'cartCtrl'
       // resolve: {
       //   user: limitUser,
       //   order: function(orderService) {
       //     return orderService.getOrder();
       //   }
       // }
+    })
+    .state('congrats', {
+      url: '/congrats',
+      templateUrl: './views/congrats.html'
     })
     // .state('shop.orders', {
     //   url: '/orders',
