@@ -2,18 +2,18 @@ angular.module('spaceXApp').service('shopService', function($http, $state) {
 
 
     this.getMens = function() {
-        return $http.get('http://localhost:3000/api/store/men')
+        return $http.get('/api/store/men')
     }
     this.getWomens = function() {
-        return $http.get('http://localhost:3000/api/store/women')
+        return $http.get('/api/store/women')
     }
     this.getKids = function() {
-        return $http.get('http://localhost:3000/api/store/kids')
+        return $http.get('/api/store/kids')
     }
     this.getProductDetails = function(id) {
       return $http({
         method: 'GET',
-        url: 'http://localhost:3000/api/store/' + id
+        url: '/api/store/' + id
       }).then(function(res) {
         console.log(res)
         return res.data
@@ -23,7 +23,7 @@ angular.module('spaceXApp').service('shopService', function($http, $state) {
     // this.loginLocal = function(credentials) {
     //   return $http({
     //     method: "POST",
-    //     url: "http://localhost:3000/auth/local",
+    //     url: "/auth/local",
     //     data: credentials
     //   })
     //   .then(function(res) {
@@ -36,7 +36,7 @@ angular.module('spaceXApp').service('shopService', function($http, $state) {
     // this.getUser = function() {
     //   return $http({
     //     method: "GET",
-    //     url: "http://localhost:3000/auth/me"
+    //     url: "/auth/me"
     //   })
     //   .then(function(res) {
     //     return res.data;
@@ -48,7 +48,7 @@ angular.module('spaceXApp').service('shopService', function($http, $state) {
     // this.logout = function() {
     //   return $http({
     //     method: "GET",
-    //     url: "http://localhost:3000/auth/logout"
+    //     url: "/auth/logout"
     //   })
     //   .then(function(res) {
     //     return res.data;
