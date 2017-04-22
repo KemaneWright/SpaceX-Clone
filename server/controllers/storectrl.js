@@ -33,7 +33,7 @@ module.exports = {
     })
   },
   getProductDetails: function(req, res) {
-    var id = req.params.id;
+    var id = req.body.id;
     console.log(id);
     db.product.get_product_details([id], function(err, product) {
       if (err) {

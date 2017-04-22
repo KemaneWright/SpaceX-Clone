@@ -69,3 +69,11 @@
 .product-info {
   margin-top:45px;
 }
+.qty-btn {
+  color: black;
+  width: 15%;
+  margin-right: 35px;
+}
+.cart-product {
+  margin-bottom: 20px;
+}

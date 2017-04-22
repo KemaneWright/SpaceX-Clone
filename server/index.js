@@ -122,9 +122,9 @@ app.get('/api/me', userCtrl.me);
 app.get('/api/user/current', isAuthed, userCtrl.update);
 
 //////////// ORDER ENDPOINTS  ////////////
-app.put('/api/order/complete', isAuthed, orderCtrl.complete, storeCtrl.getProductDetails);
+app.put('/api/order/complete', isAuthed, orderCtrl.complete);
 // app.get('/api/order/history', isAuthed, orderCtrl.orderHistory);
-app.get('/api/order', isAuthed, storeCtrl.getProductDetails);
+app.get('/api/order', isAuthed, orderCtrl.read);
 app.post('/api/order/add', isAuthed, orderCtrl.addToCart);
 app.put('/api/order/update/:id', isAuthed, orderCtrl.updateItemInCart);
 app.delete('/api/order/delete/:id', isAuthed, orderCtrl.deleteFromCart);

@@ -15,6 +15,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.kids = false;
         $scope.loginPage = false;
         $scope.cartPage = false;
+        $state.go('shop');
 
         shopService.getMens().then(function(res) {
             $scope.products = res.data
@@ -30,6 +31,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.kids = false;
         $scope.loginPage = false;
         $scope.cartPage = false;
+        $state.go('shop');
 
         shopService.getWomens().then(function(res) {
             $scope.products = res.data
@@ -45,6 +47,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.kids = true;
         $scope.loginPage = false;
         $scope.cartPage = false;
+        $state.go('shop');
 
         shopService.getKids().then(function(res) {
             $scope.products = res.data
@@ -63,12 +66,13 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.cartPage = false;
         $scope.details = res
         console.log('product id', res)
+        $state.go('shop');
 
-        if (res.product.products_type === 'men') {
+        if (res.product.type === 'men') {
             $scope.back = $scope.showMens;
-        } else if (res.product.products_type === 'women') {
+        } else if (res.product.type === 'women') {
             $scope.back = $scope.showWomens;
-        } else if (res.product.products_type === 'kids') {
+        } else if (res.product.type === 'kids') {
             $scope.back = $scope.showKids;
         }
 
@@ -91,6 +95,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         $scope.productsPage = false;
         $scope.detailsPage = false;
         $scope.cartPage = false;
+        $state.go('shop');
     }
     // function getUser() {
     //   shopService.getUser().then(function(user) {
@@ -120,7 +125,7 @@ angular.module('spaceXApp').controller('shopCtrl', function($scope, $stateParams
         orderService.addToCart(id, qty).then(function(response) {
             console.log(response);
             // $scope.cartItems.push(response.config.data);
-            $state.go("shop.cart")
+            // $state.go("shop.cart")
         });
     }
 

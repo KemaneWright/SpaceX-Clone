@@ -25,7 +25,7 @@ module.exports = {
         });
     },
     deleteFromCart: (req, res, next) => {
-        db.product.remove_from_order([req.params.id], function(err, response) {
+        db.product.remove_from_cart([req.params.id], function(err, response) {
             console.log(response);
             // if (err) {
             //   console.log('Delete product in cart err: ', err);

@@ -13,6 +13,7 @@ module.exports = {
         }
 
         // Return user
+        console.log('User: ', req.user)
         return res.status(200)
             .json(req.user);
     },

@@ -2,7 +2,7 @@ create table if not exists products (
   id serial primary key NOT NULL,
   img VARCHAR(50) NOT NULL,
   name text NOT NULL,
-  price VARCHAR(10) NOT NULL,
+  price int NOT NULL,
   type text NOT NULL
 );
 
