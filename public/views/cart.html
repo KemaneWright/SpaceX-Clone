@@ -1,76 +1,51 @@
-<button class="btn btn-primary" type="button" ng-click="submit()">Submit Order</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".stripe-modal">Submit Order</button>
 <h4>Total: {{total | currency }}</h4><br>
 <br><br>
-<form ng-submit='charge(payment)' class='col-xs-4'>
-    <h1>Angular-Stripe w/ Custom Form</h1><br><br>
-    <section class='form-group'>
-      <label>Total:</label>
-      <input
-      class='form-control'
-      type="text"
-      name=""
-      ng-model='mockPrice'
-      placeholder="{{total | currency}}'"
-      required>
-      <!-- <div ng-model='mockPrice'>${{total}}.00</div> -->
-    </section>
-    <section class='form-group'>
-        <label>Name on card:</label>
-        <input
-        type="text"
-        name="name"
-        class='form-control'
-        placeholder='any random name'
-        required>
-    </section>
-    <section class='form-group'>
-        <label>Card number:</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.number"
-        type="text"
-        placeholder="use one of Stripe's test card numbers"
-        required>
-    </section>
-    <section class='form-group'>
-        <label>CVC:</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.cvc"
-        placeholder='random CVC number'
-        type="text"
-        required>
-    </section>
-    <section class='form-group'>
-        <label>Exp. Mo</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.exp_month"
-        type="text"
-        name="name"
-        placeholder="MM">
-    </section>
-    <section class='form-group'>
-        <label>Exp. Yr</label>
-        <input
-        class='form-control'
-        ng-model="payment.card.exp_year"
-        type="text"
-        name="name"
-        placeholder="YY">
-    </section>
-    <button class='btn btn-primary' type='sumbit'>Confirm</button>
-</form>
-
-<div class="cart-product col-md-4" ng-repeat="product in orderData.products">
-  <img class="col-md-12" src="{{product.img}}" alt="">
-  <h4>{{product.name}}</h4>
-  <p>Total: {{product.price * product.qty | currency}}</p>
-  <input class="qty-btn" type="number" min="1" ng-model="product.qty" ng-change="updateItem(product.pio_id, product.qty)">
-  <button class="btn btn-danger btn-sm" type="button" name="button" ng-click="deleteItem(product.id)">Remove</button>
-  <!-- <hr> -->
+<!-- Large modal -->
+<div class="modal fade stripe-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form ng-submit='charge(payment)' class='col-xs-4'>
+                <section class='form-group'>
+                    <label>Total:</label>
+                    <div ng-model='mockPrice'>${{total}}.00</div>
+                </section>
+                <section class='form-group'>
+                    <label>Name on card:</label>
+                    <input type="text" name="name" class='form-control' placeholder='any random name' required>
+                </section>
+                <section class='form-group'>
+                    <label>Card number:</label>
+                    <input class='form-control' ng-model="payment.card.number" type="text" placeholder="use one of Stripe's test card numbers" required>
+                </section>
+                <section class='form-group'>
+                    <label>CVC:</label>
+                    <input class='form-control' ng-model="payment.card.cvc" placeholder='random CVC number' type="text" required>
+                </section>
+                <section class='form-group'>
+                    <label>Exp. Mo</label>
+                    <input class='form-control' ng-model="payment.card.exp_month" type="text" name="name" placeholder="MM">
+                </section>
+                <section class='form-group'>
+                    <label>Exp. Yr</label>
+                    <input class='form-control' ng-model="payment.card.exp_year" type="text" name="name" placeholder="YY">
+                </section>
+                <button class='btn btn-primary' type='sumbit' ng-click="submit()">Confirm</button>
+            </form>
+        </div>
+    </div>
 </div>
 
-<div  ng-hide="orderData.products.length">
-  No products in cart
+
+<div class="cart-product col-md-4" ng-repeat="product in orderData.products">
+    <img class="col-md-12" src="{{product.img}}" alt="">
+    <h4>{{product.name}}</h4>
+    <p>Total: {{product.price * product.qty | currency}}</p>
+    <input class="qty-btn" type="number" min="1" ng-model="product.qty" ng-change="updateItem(product.pio_id, product.qty)">
+    <button class="btn btn-danger btn-sm" type="button" name="button" ng-click="deleteItem(product.id)">Remove</button>
+    <!-- <hr> -->
+</div>
+
+<div ng-hide="orderData.products.length">
+    <h3>No products in cart</h3>
 </div>

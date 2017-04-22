@@ -55,14 +55,15 @@ angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService
         method: 'POST',
         url: '/api/payment',
         data: {
-          amount: $scope.mockPrice,
+          amount: $scope.total,
           payment: payment
         }
       })
     })
     .then(function(payment) {
       console.log('successfully submitted payment for $', payment);
-      $state.go('congrats');
+      alert('Congraulations! Payment Successful')
+      // $state.go('shop');
     })
     .catch(function (err) {
        if (err.type && /^Stripe/.test(err.type)) {
