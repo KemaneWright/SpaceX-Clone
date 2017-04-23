@@ -1,5 +1,7 @@
 angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService, stripe, $http, $state) {
 
+  
+
     $scope.getTotal = function() {
         // console.table($scope.orderData)
         var total = 0;
@@ -62,8 +64,9 @@ angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService
     })
     .then(function(payment) {
       console.log('successfully submitted payment for $', payment);
+      $scope.submit();
       alert('Congraulations! Payment Successful')
-      // $state.go('shop');
+      // $state.go('congrats');
     })
     .catch(function (err) {
        if (err.type && /^Stripe/.test(err.type)) {

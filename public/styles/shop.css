@@ -25,6 +25,7 @@
   padding: 2%;
   background-color: #212940;
   color: white;
+  min-height: 330px;
 }
 .welcome-img {
   margin-top: 25px;
@@ -75,5 +76,16 @@
   margin-right: 35px;
 }
 .cart-product {
-  margin-bottom: 20px;
+  margin-bottom: 75px;
+  height: 375px;
+}
+.modal {
+  width: 50%;
+  height: 350px;
+  margin: 10% 0 0 25%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-lg {
+  height: 270px;
+  width: 100%;
 }

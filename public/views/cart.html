@@ -1,36 +1,39 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".stripe-modal">Submit Order</button>
+<button type="button" class="btn submit-order btn-primary" data-toggle="modal" data-target=".stripe-modal">Submit Order</button>
 <h4>Total: {{total | currency }}</h4><br>
 <br><br>
 <!-- Large modal -->
 <div class="modal fade stripe-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <form ng-submit='charge(payment)' class='col-xs-4'>
-                <section class='form-group'>
+            <form ng-submit='charge(payment)' class='col-xs-4 col-md-12'>
+                <section class='form-group col-md-12'>
                     <label>Total:</label>
                     <div ng-model='mockPrice'>${{total}}.00</div>
                 </section>
-                <section class='form-group'>
+                <section class='form-group col-md-4'>
                     <label>Name on card:</label>
                     <input type="text" name="name" class='form-control' placeholder='any random name' required>
                 </section>
-                <section class='form-group'>
+                <section class='form-group col-md-4'>
                     <label>Card number:</label>
                     <input class='form-control' ng-model="payment.card.number" type="text" placeholder="use one of Stripe's test card numbers" required>
                 </section>
-                <section class='form-group'>
+                <section class='form-group col-md-4'>
                     <label>CVC:</label>
                     <input class='form-control' ng-model="payment.card.cvc" placeholder='random CVC number' type="text" required>
                 </section>
-                <section class='form-group'>
+                <section class='form-group col-md-4'>
                     <label>Exp. Mo</label>
                     <input class='form-control' ng-model="payment.card.exp_month" type="text" name="name" placeholder="MM">
                 </section>
-                <section class='form-group'>
+                <section class='form-group col-md-4'>
                     <label>Exp. Yr</label>
                     <input class='form-control' ng-model="payment.card.exp_year" type="text" name="name" placeholder="YY">
                 </section>
-                <button class='btn btn-primary' type='sumbit' ng-click="submit()">Confirm</button>
+                <section class="col-md-12">
+                  <button class='btn btn-danger' data-dismiss="modal">Cancel</button>
+                  <button class='btn btn-primary' type="sumbit">Confirm</button>
+              </section>
             </form>
         </div>
     </div>

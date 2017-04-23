@@ -59,6 +59,14 @@ $(window).scroll(function() {
       }
 
     // Solace Sequence
+    if (winScroll < parallaxRatio + 700) {
+        $('.solar-sequence').css({
+            'position': 'fixed',
+            'top': 501,
+            'left': 213,
+            'background-position': 0
+        });
+    }
     if (winScroll > parallaxRatio) {
         $('.solar-sequence').css({
             'position': 'fixed',
