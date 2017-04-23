@@ -23,7 +23,7 @@
 .shop-content {
   text-align: center;
   padding: 2%;
-  background-color: #212940;
+  background-color: #000032;
   color: white;
   min-height: 330px;
 }
@@ -81,11 +81,25 @@
 }
 .modal {
   width: 50%;
-  height: 350px;
-  margin: 10% 0 0 25%;
-  background-color: rgba(0, 0, 0, 0.8);
+  height: 400px;
+  margin: 12% 0 0 25%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .modal-lg {
-  height: 270px;
+  height: 370px;
   width: 100%;
+  margin: 0;
+}
+.checkout-input {
+  margin-left: 17%;
+}
+.form-group > h2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.form-group > h3 {
+  margin-top: 5px;
+}
+.checkout-btns {
+  margin-top: 10px;
 }
