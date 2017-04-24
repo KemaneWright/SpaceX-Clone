@@ -177,3 +177,8 @@ button:focus {outline:0;}
     -webkit-transform: translateX(-200%);
   }
 }
+@media (max-width: 1200px) {
+  .careers-background {
+    margin-top: 80px;
+  }
+}

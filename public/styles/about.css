@@ -56,6 +56,7 @@
 
 .vid-border {
     border-bottom: 1px dashed black;
+    padding-bottom: 29%;
 }
 
 .about-videos button {
@@ -245,4 +246,40 @@
 .launch-header {
   margin-top: 60px;
   margin-bottom: 30px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .quick-facts {
+    margin-top: 25px;
+    margin-right: 35px;
+    padding: 0;
+  }
+  .quick-facts h3 {
+    font-size: 15px;
+    margin-left: 25px;
+  }
+  .quick-facts table {
+    font-size: 10px;
+  }
+  .vid-border {
+      border-bottom: 1px dashed black;
+      padding-bottom: 40%;
+  }
+  .about-clone {
+    height: 833px;
+  }
+  .year {
+    height: 322px;
+  }
+  .about2-background h1 {
+    font-size: 45px;
+  }
+  .about2-background p {
+    top: 15%;
+  }
+  .launch-site {
+    height: 885px;
+  }
 }

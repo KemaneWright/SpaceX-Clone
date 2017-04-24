@@ -1,8 +1,8 @@
-<div class="collection">
+<div class="col-xs-12 collection">
   <h1 ng-show="mens">MENS</h1><h1 ng-show="womens">WOMENS</h1><h1 ng-show="kids">KIDS</h1>
-  <div class="product-container col-md-4" ng-repeat="product in products">
+  <div class="product-container col-xs-12 col-md-4" ng-repeat="product in products">
     <a ng-click="getProductDetails({product: product})">
-    <img class="col-md-12" src="{{product.img}}" alt="">
+    <img class="col-xs-12 col-md-12" src="{{product.img}}" alt="">
     <h4>{{product.name}}</h4>
     <p>${{product.price}}.00</p>
     </a>

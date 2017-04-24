@@ -35,6 +35,9 @@
     .navbar-brand {
         padding: 10px 0px 10px 10px;
     }
+    .nav .nav-desk-only {
+      display: none;
+    }
 
     .navbar-nav>li>a {
         padding-left: 0px;
@@ -108,6 +111,9 @@
             padding-left: 0px;
             padding-right: 0px;
             margin-right: 25px;
+        }
+        .nav .nav-desk-only {
+          display: inline;
         }
         .container-fluid>.navbar-header {
             margin-left: -15px;

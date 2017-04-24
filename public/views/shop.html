@@ -5,17 +5,17 @@
         <li ng-click="showKids()" class="col-md-2">Kids</li>
         <li ui-sref="shop.cart" ng-click="showCart()" class="col-md-2 right"><span ng-click="showMens" class="glyphicon glyphicon-shopping-cart
 "></span> Cart</li>
-        <li ng-click="showLogin()" class="col-md-2 right">Log in</li>
+<li ng-click="showLogin()" class="col-md-2 right">Log in</li>
     </ul>
 </div>
 
 
 
-<div class="shop-background col-md-12">
+<div class="shop-background col-xs-12 col-md-12">
     <div class="shop-content container">
       <div ng-show="welcome">
         <h1>Welcome To The SpaceX Store</h1>
-        <img class="welcome-img" src="./images/occupy_mars.jpg" alt="">
+        <img class="col-xs-12 col-md-8 welcome-img" src="./images/occupy_mars.jpg" alt="">
       </div>
       <products-page ng-show="productsPage"></products-page>
       <product-details ng-show="detailsPage"></product-details>

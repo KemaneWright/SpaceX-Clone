@@ -5,7 +5,7 @@
 <div class="modal fade stripe-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <form ng-submit='charge(payment)' class='col-xs-4 col-md-12'>
+            <form ng-submit='charge(payment)' class='col-xs-12 col-md-12'>
                 <section class='form-group col-md-12'>
                     <h2>Total:</h2>
                     <h3 ng-model='mockPrice'>${{total}}.00</h3>
@@ -43,7 +43,7 @@
 
 
 <div class="cart-product col-md-4" ng-repeat="product in orderData.products">
-    <img class="col-md-12" src="{{product.img}}" alt="">
+    <img class="col-xs-12 col-md-12" src="{{product.img}}" alt="">
     <h4>{{product.name}}</h4>
     <p>Total: {{product.price * product.qty | currency}}</p>
     <input class="qty-btn" type="number" min="1" ng-model="product.qty" ng-change="updateItem(product.pio_id, product.qty)">
