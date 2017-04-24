@@ -3,7 +3,7 @@ $(window).scroll(function() {
 
     //commented out console.log so it's not
     //logging all the time! Uncomment to debug.
-    console.log(winScroll);
+    // console.log(winScroll);
     var parallaxRatio = 850;
     //parallaxRatio variable not fully implemented yet
     // ^^ DO NOT USE ^^
