@@ -54,31 +54,33 @@
     display: none;
   }
   .falc-heavy-background {
-    height: 475px;
+    height: 341px;
     margin-top: 80px;
   }
   .desktop-only {
     display: block;
     background-color: #F7F7F7;
     padding: 3% 15%;
+    min-height: 525px;
   }
   .falcheavyHead {
     font-size: 45px;
-    padding: 0px 35%;
+    padding: 0px 28%;
+    top: -85%;
   }
   .falc-heavy-background a {
     font-size: 60px;
-    top: -300px;
+    top: -270px;
   }
   .desktop-falc-heavy {
     overflow: auto;
-    height: 3000px;
+    /*height: 3000px;*/
     text-align: right;
     position: relative;
     display: block;
   }
   .desktop-falc-heavy-img {
-    width: 510px;
+    width: 450px;
   }
   .falc-heavy-left {
     position: absolute;
@@ -89,7 +91,7 @@
   }
   .falc-heavy-left img {
     margin-left: 15px;
-    margin-top: 75px;
+    margin-top: 165px;
   }
   .desktop-falc-heavy h2 {
     margin-bottom: 30px;
@@ -130,10 +132,7 @@
   .block {
     display: block;
   }
-  .falc-heavy-left img {
-    margin-left: 15px;
-    margin-top: 400px;
-  }
+
   .falcHeavy-info {
     height: 1600px;
     position: relative;
@@ -144,6 +143,22 @@
   .falcHeavy-milestone-head {
     padding-left: 30px;
     margin-top: 40px;
+    margin-bottom: 25px;
   }
 
+}
+@media (min-width: 1200px) {
+  .falc-heavy-background {
+    height: 475px;
+  }
+  .falcheavyHead {
+    padding: 0 35%;
+  }
+  .desktop-falc-heavy-img {
+    width: 510px;
+  }
+  .falc-heavy-left img {
+    margin-left: 15px;
+    margin-top: 475px;
+  }
 }

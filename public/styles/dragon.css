@@ -66,14 +66,15 @@
     }
     .dragon-background a {
         font-size: 60px;
-        top: -350px;
+        top: -290px;
     }
     .dragonHeader {
         font-size: 45px;
-        padding: 0px 35%;
+        padding: 0px 28%;
+        top: -87%;
     }
     .dragon-background {
-        height: 513px;
+        height: 369px;
         margin-top: 80px;
     }
     .drag-mini {
@@ -146,8 +147,8 @@
     }
     .parallax-wrap {
       position: relative;
-      left: 40%;
-      width: 680px;
+      left: 38%;
+      width: 370px;
     }
     .nose {
         background-image: url('../images/nose-cone3.png');
@@ -179,7 +180,7 @@
       background-image: url('../images/solar-sequence.png');
       /*background-position: center;*/
       background-repeat: no-repeat;
-      width: 1024px;
+      width: 970px;
       height: 240px;
       left: -393px;
       z-index: 2;
@@ -205,14 +206,27 @@
       margin-top: 185px;
       margin-bottom: 60px;
     }
+}
 
-
-
-
-
-
-
-
-
-
+@media(min-width: 1200px) {
+  .dragon-background {
+      height: 513px;
+      margin-top: 80px;
+  }
+  .dragonHeader {
+      font-size: 45px;
+      padding: 0px 35%;
+  }
+  .dragon-background a {
+      font-size: 60px;
+      top: -390px;
+  }
+  .solar-sequence {
+    width: 1024px;
+  }
+  .parallax-wrap {
+    position: relative;
+    left: 40%;
+    width: 680px;
+  }
 }

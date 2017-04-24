@@ -148,20 +148,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 992px) {
     .mobile-img {
         display: none;
@@ -182,17 +168,18 @@
       display: block;
     }
     .falcon9-background {
-        height: 513px;
+        height: 369px;
+        margin-top: 75px;
     }
     .falconhead {
-        top: 25%;
-        padding: 0 28%;
+        top: 6%;
+        padding: 0 16%;
         text-align: center;
         font-size: 50px;
     }
     .watch-falcon9 {
       font-size: 60px;
-      top: -135px;
+      top: -125px;
     }
     .falc-9-plax {
       display: none;
@@ -202,7 +189,7 @@
       text-align: left;
       background-color: #0b0b0b;
       margin-bottom: 80px;
-      padding: 5%;
+      padding: 4%;
       margin-top: 50px;
       position: relative;
     }
@@ -215,7 +202,7 @@
       width: 100%;
     }
     .intro {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 115px;
       font-family: 'Arimo', sans-serif;
     }
@@ -360,6 +347,7 @@
     }
     .milestone-head {
       padding-left: 30px;
+      margin-bottom: 25px;
     }
 
     .falc9-updates-container {
@@ -408,4 +396,25 @@
       margin-top: 30px;
       margin-left: 20px;
     }
+}
+@media (min-width: 1200px) {
+  .falcon9-background {
+    height: 513px;
+  }
+  .falconhead {
+      top: 20%;
+      padding: 0 28%;
+      text-align: center;
+      font-size: 50px;
+  }
+  .watch-falcon9 {
+    font-size: 60px;
+    top: -155px;
+  }
+  .intro {
+    font-size: 18px;
+  }
+  .technicaloverwiew {
+    padding: 5%;
+  }
 }

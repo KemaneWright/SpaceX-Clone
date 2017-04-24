@@ -3,7 +3,7 @@ $(window).scroll(function() {
 
     //commented out console.log so it's not
     //logging all the time! Uncomment to debug.
-    // console.log(winScroll);
+    console.log(winScroll);
     var parallaxRatio = 850;
     //parallaxRatio variable not fully implemented yet
     // ^^ DO NOT USE ^^
@@ -237,7 +237,95 @@ $(window).scroll(function() {
         });
       }
 
+      var width = $(window).width()
+      if (width === 1024) {
+        // Spacecraft
+        if (winScroll > parallaxRatio) {
+            $('.dragon-spacecraft').css({
+                'position': 'fixed',
+                'top': 217
+            });
+        } else {
+            $('.dragon-spacecraft').css({
+                'position': 'absolute',
+                'top': 91,
+            });
+        }
+        if (winScroll > parallaxRatio + 335) {
+            $('.dragon-spacecraft').css({
+                'position': 'absolute',
+                'top': 425
+            });
+        }
+        // Trunk
+        if (winScroll > parallaxRatio) {
+            $('.trunk').css({
+                'position': 'fixed',
+                'top': 388
+            });
+        } else {
+            $('.trunk').css({
+                'position': 'absolute',
+                'top': 262
+            });
+        };
+        if (winScroll > parallaxRatio + 625) {
+            $('.trunk').css({
+                'position': 'absolute',
+                'top': 885
+            });
+          }
+          // Solace Sequence
+          if (winScroll < parallaxRatio + 700) {
+              $('.solar-sequence').css({
+                  'position': 'fixed',
+                  'top': 368,
+                  'left': 7,
+                  'background-position': 0
+              });
+          }
+          if (winScroll > parallaxRatio) {
+              $('.solar-sequence').css({
+                  'position': 'fixed',
+                  'top': 368,
+                  'left': 7
+              });
+          } else {
+              $('.solar-sequence').css({
+                  'position': 'absolute',
+                  'top': 238,
+                  'left': -393
+              });
+          };
+          if (winScroll > parallaxRatio + 970) {
+              $('.solar-sequence').css({
+                  'position': 'absolute',
+                  'top': 1200,
+                  'left': -393
+              });
+            }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      }
 
 
 

@@ -50,9 +50,6 @@
 }
 
 @media (min-width: 992px) {
-    .home-background {
-        margin-top: 0px;
-    }
     #drgrtn strong {
         position: relative;
         top: -5px;
@@ -68,11 +65,28 @@
         height: 50px;
         width: 145px;
     }
+    .home-info {
+      height: 600px;
+    }
     .home-block-img {
         top: 80px;
+        height: 300px;
+        margin-left: 3%;
+        width: 30%;
+        font-size: 20px;
     }
     .home-info p {
         font-size: 30px;
+    }
+    #drgrtn {
+      height: 65px;
+    }
+    #drgrtn p {
+      left: 0%;
+      margin-bottom: 0;
+    }
+    .home-background {
+      margin-top: -40px;
     }
 }
 

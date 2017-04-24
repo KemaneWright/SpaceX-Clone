@@ -1,35 +1,42 @@
 .updates-nav-item a {
-  color: #222;
-  border: none;
+    color: #222;
+    border: none;
 }
+
 .nav-tabs>li.active>a {
-  background-color: #eee;
-  color: #222;
-  border: none;
+    background-color: #eee;
+    color: #222;
+    border: none;
 }
+
 .nav-tabs>li>a:hover {
-  background-color: white;
-  color: #222;
-  border: none;
+    background-color: white;
+    color: #222;
+    border: none;
 }
+
 .nav-tabs>li.active>a:hover {
-  background-color: #eee;
-  color: #222;
+    background-color: #eee;
+    color: #222;
 }
+
 .updates-nav {
-  padding: 0px;
-  background: #eee;
-  border: none;
-  text-align: center;
+    padding: 0px;
+    background: #eee;
+    border: none;
+    text-align: center;
 }
+
 .update-nav {
-  padding: 0px;
+    padding: 0px;
 }
+
 .update-nav>li {
-  padding: 0px;
+    padding: 0px;
 }
+
 .update-nav>li>a {
-  padding: 20px 15px;
+    padding: 20px 15px;
 }
 
 #desktop-updates {
@@ -53,31 +60,29 @@
 .lastblock p {
     border: none;
 }
+
 .slider {
-  display: none;
+    display: none;
 }
+
 .updates-news {
-  background-color: #ECECEC;
+    background-color: #ECECEC;
 }
+
 .load-news {
-  position: relative;
-  left: 34%;
+    position: relative;
+    left: 34%;
 }
-
-
-
-
-
 
 @media(min-width: 992px) {
     .updates-nav {
-        margin-top: 85px;
+        margin-top: 80px;
     }
     #desktop-updates {
         display: block;
     }
     .spaceX-news {
-      box-shadow: 0 0px 5px 0;
+        box-shadow: 0 0px 5px 0;
     }
     .center-grey {
         background: #f2f2f2;
@@ -104,41 +109,47 @@
         font-size: 18px;
     }
     .updates-news {
-      padding: 2% 11%;
+        padding: 2% 11%;
     }
     .news-signup h1 {
-      font-size: 60px;
+        font-size: 60px;
     }
     .news-signup p {
-      border-bottom: 1px solid black;
-      padding-bottom: 10px;
-      width: 80%;
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        width: 80%;
     }
     .news-signup input {
-      width: 80%;
+        width: 80%;
     }
     .load-news {
-      position: relative;
-      left: 63%;
-      top: 15px;
+        position: relative;
+        left: 63%;
+        top: 15px;
     }
 }
 
-
 .updates-gallery-box {
-  height: 550px;
-  background-color: #222;
-  color: white;
-  padding-top: 25px;
+    height: 550px;
+    background-color: #222;
+    color: white;
+    padding-top: 25px;
 }
+
 updates-gallery .slider-content {
-  position: absolute;
-  height: 250px;
-  color: white;
-  width: 50%;
-  left: 25%;
-  text-align: center;
-  padding: 3% 10%;
-  top: 20%;
-  background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: 250px;
+    color: white;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+    padding: 3% 10%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+@media (min-width: 1200px) {
+  .updates-nav {
+      margin-top: 88px;
+  }
 }
