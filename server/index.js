@@ -126,28 +126,19 @@ app.post('/api/payment', function(req, res, next) {
 
 
 ///////////  PASSPORT ENDPOINTS /////////
-app.get('/auth', function(req, res, next) {
-    if (req.query.state) {
-        req.session.state = req.query.state;
-    }
-    passport.authenticate('auth0')(req, res, next);
-});
-app.get('/auth/callback', function(req, res, next) {
-    var state = 'profile';
-    if (req.session.state) {
-        state = req.session.state;
-    }
-    req.session.state = null;
+app.get('/auth', passport.authenticate('auth0'));
 
-    passport.authenticate('auth0', {
-        successRedirect: '/#!/shop',
-        failureRedirect: '/#!/shop'
-    })(req, res, next);
+app.get('/auth/callback', passport.authenticate('auth0', {successRedirect: '/#/shop'}))
+
+app.get('/auth/me', function(req,res) {
+  if(!req.user) return res.sendStatus(404);
+
+  return res.staus(200).send(req.user);
 })
-app.get('/api/logout', function(req, res, next) {
-    req.logout();
-    return res.status(200)
-        .send('logged out');
+
+app.get('/auth/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
 })
 
 /////////// POLICIES ////////////
