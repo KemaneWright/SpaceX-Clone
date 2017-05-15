@@ -66,9 +66,6 @@ angular.module('spaceXApp', ['ui.router', 'angular-stripe'])
                 url: '/cart',
                 templateUrl: './views/cart.html',
                 controller: 'cartCtrl',
-                resolve: {
-                  user: getUser
-                }
             })
             .state('congrats', {
                 url: '/congrats',
