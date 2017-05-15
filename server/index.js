@@ -128,17 +128,19 @@ app.post('/api/payment', function(req, res, next) {
 ///////////  PASSPORT ENDPOINTS /////////
 app.get('/auth', passport.authenticate('auth0'));
 
-app.get('/auth/callback', passport.authenticate('auth0', {successRedirect: '/#/shop'}))
+app.get('/auth/callback', passport.authenticate('auth0', {
+    successRedirect: '/#/shop'
+}))
 
-app.get('/auth/me', function(req,res) {
-  if(!req.user) return res.sendStatus(404);
+app.get('/auth/me', function(req, res) {
+    if (!req.user) return res.sendStatus(404);
 
-  return res.staus(200).send(req.user);
+    return res.staus(200).send(req.user);
 })
 
 app.get('/auth/logout', function(req, res) {
-  req.logout();
-  res.redirect('/');
+    req.logout();
+    res.redirect('/');
 })
 
 /////////// POLICIES ////////////

@@ -11,7 +11,6 @@ module.exports = {
             return res.status(401)
                 .send('current user not defined');
         }
-
         // Return user
         console.log('User: ', req.user)
         return res.status(200)
