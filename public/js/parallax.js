@@ -1,11 +1,11 @@
 $(window).scroll(function() {
-    var winScroll = $(this).scrollTop();
+    const winScroll = $(this).scrollTop();
 
     //commented out console.log so it's not
     //logging all the time! Uncomment to debug.
     // console.log(winScroll);
-    var parallaxRatio = 850;
-    //parallaxRatio variable not fully implemented yet
+    const parallaxRatio = 850;
+    //parallaxRatio constiable not fully implemented yet
     // ^^ DO NOT USE ^^
 
     // Nose
@@ -237,7 +237,7 @@ $(window).scroll(function() {
         });
       }
 
-      var width = $(window).width()
+      const width = $(window).width()
       if (width === 1024) {
         // Spacecraft
         if (winScroll > parallaxRatio) {

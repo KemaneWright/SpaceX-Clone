@@ -1,9 +1,9 @@
-var app = require('../index');
-var db = app.get('db');
+const app = require('../index');
+const db = app.get('db');
 
 module.exports = {
   getMens: function(req, res, next) {
-    db.product.get_mens([], function(err, product) {
+    db.product.get_mens([], (err, product) => {
       if (err) {
         return res.status(500).send(err)
       }
@@ -13,7 +13,7 @@ module.exports = {
     })
   },
   getWomens: function(req, res, next) {
-    db.product.get_womens([], function(err, product) {
+    db.product.get_womens([], (err, product) => {
       if (err) {
         return res.status(500).send(err)
       }
@@ -23,7 +23,7 @@ module.exports = {
     })
   },
   getKids: function(req, res, next) {
-    db.product.get_kids([], function(err, product) {
+    db.product.get_kids([], (err, product) => {
       if (err) {
         return res.status(500).send(err)
       }
@@ -33,9 +33,9 @@ module.exports = {
     })
   },
   getProductDetails: function(req, res) {
-    var id = req.body.id;
+    const id = req.body.id;
     console.log(id);
-    db.product.get_product_details([id], function(err, product) {
+    db.product.get_product_details([id], (err, product) => {
       if (err) {
         console.log(err)
       }

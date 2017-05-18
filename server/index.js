@@ -28,9 +28,9 @@ const massiveServer = massive.connectSync({
     connectionString: massiveUri
 });
 app.set('db', massiveServer);
-var db = app.get('db');
+const db = app.get('db');
 
-var dbSetup = require('./services/dbSetup');
+const dbSetup = require('./services/dbSetup');
 dbSetup.run();
 
 
@@ -39,17 +39,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new auth0(config.AUTH_CONFIG, function(accessToken, refreshToken, extraParams, profile, done) {
-    db.user.email([profile.displayName], function(err, user) {
+    db.user.email([profile.displayName], (err, user) => {
         if (err) {
             return done(err);
         } else if (!user.length) {
-            db.user.create([profile.nickname, profile.displayName], function(err, user) {
+            db.user.create([profile.nickname, profile.displayName], (err, user) => {
                 if (err) {
                     return done(err);
                 }
                 console.log('User created');
 
-                db.order.insert([user[0].user_id], function(err, order) {
+                db.order.insert([user[0].user_id], (err, order) => {
                     if (err) {
                         console.log('DB Create, durring user create: ', err);
                     }
@@ -60,7 +60,7 @@ passport.use(new auth0(config.AUTH_CONFIG, function(accessToken, refreshToken, e
             })
         } else {
             console.log('User found');
-            db.order.read_incomplete([user[0].user_id], function(err, order) {
+            db.order.read_incomplete([user[0].user_id], (err, order) => {
                 if (err) {
                     return console.log("Find User Auth, Order not found", err);
                 }
@@ -87,10 +87,10 @@ app.post('/api/payment', function(req, res, next) {
     console.log(req.body);
 
     //convert amount to pennies
-    const chargeAmt = req.body.amount;
-    const amountArray = chargeAmt.toString().split('');
-    const pennies = [];
-    for (var i = 0; i < amountArray.length; i++) {
+    let chargeAmt = req.body.amount;
+    let amountArray = chargeAmt.toString().split('');
+    let pennies = [];
+    for (let i = 0; i < amountArray.length; i++) {
         if (amountArray[i] === ".") {
             if (typeof amountArray[i + 1] === "string") {
                 pennies.push(amountArray[i + 1]);
@@ -107,16 +107,16 @@ app.post('/api/payment', function(req, res, next) {
             pennies.push(amountArray[i])
         }
     }
-    const convertedAmt = parseInt(pennies.join(''));
+    let convertedAmt = parseInt(pennies.join(''));
     console.log("Pennies: ");
     console.log(convertedAmt);
 
-    const charge = stripe.charges.create({
+    let charge = stripe.charges.create({
         amount: convertedAmt, // amount in cents, again
         currency: 'usd',
         source: req.body.payment.token,
         description: 'Test charge from grahms repo'
-    }, function(err, charge) {
+    }, (err, charge) => {
         res.sendStatus(200);
         // if (err && err.type === 'StripeCardError') {
         //   // The card has been declined
@@ -144,15 +144,15 @@ app.get('/auth/logout', function(req, res) {
 })
 
 /////////// POLICIES ////////////
-var isAuthed = function(req, res, next) {
+const isAuthed = function(req, res, next) {
     if (!req.isAuthenticated()) return res.status(401).send();
     return next();
 }
 
 ////////////  CONTROLLERS ////////////
-var storeCtrl = require('./controllers/storectrl.js');
-var orderCtrl = require('./controllers/orderctrl.js');
-var userCtrl = require('./controllers/userctrl.js');
+const storeCtrl = require('./controllers/storectrl.js');
+const orderCtrl = require('./controllers/orderctrl.js');
+const userCtrl = require('./controllers/userctrl.js');
 
 
 //////////// USER ENDPOINTS  ////////////
@@ -173,7 +173,7 @@ app.get('/api/store/women', storeCtrl.getWomens)
 app.get('/api/store/kids', storeCtrl.getKids)
 app.get('/api/store/:id', storeCtrl.getProductDetails)
 
-var port = config.PORT;
+const port = config.PORT;
 app.listen(port, function() {
     console.log('listening on 3000');
 })

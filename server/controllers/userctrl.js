@@ -1,5 +1,5 @@
-var app = require('../index');
-var db = app.get('db');
+const app = require('../index');
+const db = app.get('db');
 
 module.exports = {
     // RETURN CURRENT USER //
@@ -20,9 +20,9 @@ module.exports = {
     update: (req, res, next) => {
         console.log('Starting update');
 
-        var updateUser = req.body;
+        const updateUser = req.body;
         updateUser.id = req.user.id;
-        db.users.save(updateUser, function(err, user) {
+        db.users.save(updateUser, (err, user) => {
             if (err) {
                 console.log('User update error', err);
 

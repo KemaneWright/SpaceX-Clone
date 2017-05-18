@@ -3,7 +3,7 @@ angular.module('spaceXApp', ['ui.router', 'angular-stripe'])
 
         stripeProvider.setPublishableKey('pk_test_h2qUyp2knoRVuuBtnXzYKqyf');
 
-        var limitUser = function(authService, $state) {
+        let limitUser = function(authService, $state) {
             return authService.getCurrentUser()
                 .then(function(response) {
                     if (!response.data) {
@@ -15,7 +15,7 @@ angular.module('spaceXApp', ['ui.router', 'angular-stripe'])
                     $state.go('home');
                 });
         }
-        var getUser = function(authService) {
+        let getUser = function(authService) {
             return authService.getCurrentUser()
                 .then(function(response) {
                     return response.data;

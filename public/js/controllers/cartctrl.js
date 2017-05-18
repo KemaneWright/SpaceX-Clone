@@ -1,11 +1,11 @@
 angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService, stripe, $http, $state) {
 
-  
+
 
     $scope.getTotal = function() {
         // console.table($scope.orderData)
-        var total = 0;
-        for (var i = 0; i < $scope.orderData.products.length; i++) {
+        let total = 0;
+        for (let i = 0; i < $scope.orderData.products.length; i++) {
             total += $scope.orderData.products[i].price * $scope.orderData.products[i].qty
         }
         $scope.total = total;
@@ -49,10 +49,10 @@ angular.module('spaceXApp').controller('cartCtrl', function($scope, orderService
     return stripe.card.createToken($scope.payment.card)
     .then(function (response) {
       console.log('token created for card ending in ', response.card.last4);
-      var payment = angular.copy($scope.payment);
+      let payment = angular.copy($scope.payment);
       payment.card = void 0;
       payment.token = response.id;
-      // var adjPrice = $scope.mockPrice * 100
+      // let adjPrice = $scope.mockPrice * 100
       return $http({
         method: 'POST',
         url: '/api/payment',

@@ -93,8 +93,8 @@ angular.module("spaceXApp").controller('sliderCtrl', function($scope) {
         })
         scope.images[scope.currentIndex].visable = true;
       })
-      var timer;
-      var sliderFunc = function() {
+      let timer;
+      let sliderFunc = function() {
         timer = $timeout(function() {
           scope.next()
           timer = $timeout(sliderFunc, 1000)

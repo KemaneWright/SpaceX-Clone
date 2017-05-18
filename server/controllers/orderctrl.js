@@ -1,9 +1,9 @@
-var app = require('../index');
-var db = app.get('db');
+const app = require('../index');
+const db = app.get('db');
 
 module.exports = {
     addToCart: function(req, res, next) {
-        db.product.add_to_cart([req.user.order_id, req.body.product_id, req.body.qty], function(err, product) {
+        db.product.add_to_cart([req.user.order_id, req.body.product_id, req.body.qty], (err, product) => {
             if (err) {
                 console.log('Add to Order err: ', err);
                 return res.status(500).send(err);
@@ -14,7 +14,7 @@ module.exports = {
     },
     updateItemInCart: (req, res, next) => {
         console.log(req.params.id);
-        db.product.update_order([req.params.id, req.body.qty], function(err, product) {
+        db.product.update_order([req.params.id, req.body.qty], (err, product) => {
 
             // if (err) {
             //   console.log('Update qty err: ', err);
@@ -25,7 +25,7 @@ module.exports = {
         });
     },
     deleteFromCart: (req, res, next) => {
-        db.product.remove_from_cart([req.params.id], function(err, response) {
+        db.product.remove_from_cart([req.params.id], (err, response) => {
             console.log(response);
             // if (err) {
             //   console.log('Delete product in cart err: ', err);
@@ -36,7 +36,7 @@ module.exports = {
         });
     },
     complete: (req, res, next) => {
-        db.order.update([req.user.order_id, new Date(), undefined], function(err, order) {
+        db.order.update([req.user.order_id, new Date(), undefined], (err, order) => {
             console.log(order);
             // if (err) {
             //   console.log('complete order err: ', err);
@@ -55,13 +55,13 @@ module.exports = {
         })
     },
     read: function(req, res, next) {
-        db.order.read_id([req.user.order_id], function(err, order) {
+        db.order.read_id([req.user.order_id], (err, order) => {
             if (err) {
                 console.log('Order read err: ', err);
                 return res.status(500).send(err);
             }
 
-            var totalOrder = {
+            const totalOrder = {
                 order: order[0]
             };
 

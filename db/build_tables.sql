@@ -23,7 +23,7 @@ create table if not exists product_in_order (
   pio_id serial primary key,
   order_id int,
   product_id int,
-  qty int
+  qty int default 1
 );
 
 -- create table if not exists gallery (
