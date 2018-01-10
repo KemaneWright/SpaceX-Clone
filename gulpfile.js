@@ -15,6 +15,7 @@ const paths = {
 //     'script': paths.server
 //   })
 // })
+
 gulp.task('js-bundle', () => {
   gulp.src(paths.jsSource)
   .pipe(sourcemap.init())
