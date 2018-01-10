@@ -1,1 +1,1 @@
-![alt text](/Readme Screenshots/Dragon.png "Dragon")
+![alt text](/Readme_Screenshots/Dragon.png "Dragon")
